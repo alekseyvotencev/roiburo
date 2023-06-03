@@ -1,0 +1,230 @@
+.footer {
+    padding-top: 12rem;
+    padding-bottom: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        &-contacts {
+            margin-bottom: 4.8rem;
+        }
+
+        &-contacts,
+        &-services {
+            &__heading {
+                margin-bottom: 2.4rem;
+            }
+
+            &__list {
+                &-item {
+                    &:not(:last-child) {
+                        margin-bottom: 1.2rem;
+                    }
+
+                    p,
+                    a {
+                        font-size: 1.6rem;
+                        line-height: 2.4rem;
+                        color: #c6c6c6;
+                    }
+                }
+            }
+        }
+
+        &-bottom {
+            margin-top: auto;
+            display: flex;
+            align-items: flex-start;
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+            color: #989899;
+
+            p {
+                margin-right: 3.4rem;
+            }
+        }
+    }
+
+    &__right {
+        padding: 12rem 10.4rem 2.4rem 10.4rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 105.2rem;
+        height: 100%;
+        background-color: $white;
+        color: $black;
+
+        &-heading {
+            margin-bottom: 2.4rem;
+        }
+
+        &-form {
+            width: 49.6rem;
+        }
+
+        &-logo {
+            position: absolute;
+            bottom: 0;
+            left: 10.4rem;
+            width: 49.6rem;
+            height: 23.2rem;
+        }
+    }
+
+    @media (max-width: 62em) {
+        flex-direction: column-reverse;
+        height: auto;
+
+        &__right {
+            padding: 30.3rem 14.7rem;
+            position: relative;
+            height: auto;
+            right: auto;
+            top: auto;
+            width: 100%;
+
+            &-form {
+                width: auto;
+            }
+        }
+
+        &__left {
+            padding-top: 31rem;
+            padding-bottom: 2.4rem;
+            width: 100%;
+            height: auto;
+
+            .container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            &-contacts {
+                order: 1;
+            }
+
+            &-services {
+                order: 0;
+            }
+
+            &-bottom {
+                margin-top: 32rem;
+                width: 100%;
+                order: 2;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    @media (max-width: 47.99em) {
+        &__right {
+            padding: 35.6rem 3.2rem;
+
+            &-heading {
+                margin-bottom: 4.8rem;
+            }
+        }
+
+        &__left {
+            padding-top: 20.4rem;
+            padding-bottom: 4.8rem;
+
+            .container {
+                flex-wrap: nowrap;
+                flex-direction: column;
+            }
+
+            &-contacts {
+                margin-bottom: 9.6rem;
+                order: 0;
+
+                &__heading {
+                    margin-bottom: 3.2rem;
+                }
+
+                &__list {
+                    &-item {
+                        &:not(:last-child) {
+                            margin-bottom: 0;
+                        }
+
+                        p {
+                            padding-top: 2.1rem;
+                            padding-bottom: 2.1rem;
+                            display: inline-block;
+                            font-size: 3.2rem;
+                            line-height: 3.8rem;
+                        }
+
+                        a {
+                            padding-top: 2.1rem;
+                            padding-bottom: 2.1rem;
+                            display: inline-block;
+                            font-size: 3.2rem;
+                            line-height: 3.8rem;
+                        }
+                    }
+                }
+            }
+
+            &-services {
+                order: 1;
+
+                &__heading {
+                    margin-bottom: 3.2rem;
+                }
+
+                &__list {
+                    &-item {
+                        &:not(:last-child) {
+                            margin-bottom: 0;
+                        }
+
+                        p {
+                            padding-top: 2.1rem;
+                            padding-bottom: 2.1rem;
+                            display: inline-block;
+                            font-size: 3.2rem;
+                            line-height: 3.8rem;
+                        }
+
+                        a {
+                            padding-top: 2.1rem;
+                            padding-bottom: 2.1rem;
+                            display: inline-block;
+                            font-size: 3.2rem;
+                            line-height: 3.8rem;
+                        }
+                    }
+                }
+            }
+
+            &-bottom {
+                margin-top: 9.6rem;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: 2.4rem;
+                line-height: 3.4rem;
+
+                p {
+                    margin-bottom: .8rem;
+                }
+            }
+        }
+    }
+}

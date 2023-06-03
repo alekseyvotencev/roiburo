@@ -1,0 +1,185 @@
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__left {
+        width: 80.8rem;
+    }
+
+    &__right {
+        width: 39.2rem;
+    }
+
+    &__heading {
+        margin-bottom: 1.6rem;
+    }
+
+    &__description {
+        margin-bottom: 6.4rem;
+        font-size: 2rem;
+        line-height: 2.8rem;
+        color: #1a1a1b;
+    }
+
+    &__icon {
+        margin-bottom: 6.4rem;
+        width: 25.6rem;
+        height: 25.6rem;
+        object-fit: contain;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: flex-start;
+
+        .request-btn {
+            margin-right: 1.6rem;
+        }
+
+        .about-service {
+            padding: 1.6rem 3.2rem;
+            display: flex;
+            align-items: center;
+            border-color: $red;
+            color: $red;
+
+            span {
+                &:first-child {
+                    margin-right: 2.4rem;
+                }
+
+                &:nth-child(2) {
+                    margin-right: 0.4rem;
+                }
+            }
+
+            img {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+        }
+    }
+
+    &__tags {
+        &-item {
+            &:not(:last-child) {
+                margin-bottom: 0.8rem;
+            }
+        }
+    }
+
+    @media (max-width: 62rem) {
+        padding-top: 18.9rem;
+        padding-bottom: 18.9rem;
+        display: block;
+        height: auto;
+
+        &__container {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        &__left {
+            width: 100%;
+        }
+
+        &__right {
+            width: 100%;
+        }
+
+        &__heading {
+            margin-bottom: 4rem;
+        }
+
+        &__item {
+            padding: 11.2rem 4rem 4rem 4rem;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            top: 0;
+            right: 0;
+            width: 51.7rem;
+            transform: translateX(100%);
+            min-height: 100vh;
+            overflow-y: scroll;
+            background-color: $white;
+
+            &.active {
+                transform: translateX(0);
+            }
+
+            &-heading {
+                margin-bottom: 1.6rem;
+                font-weight: 500;
+                font-size: 2.4rem;
+                line-height: 2.9rem;
+                color: #0f0f10;
+            }
+
+            &-price {
+                font-weight: 500;
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                color: $red;
+            }
+        }
+
+        &__description {
+            margin-bottom: 1.6rem;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+        }
+
+        &__icon {
+            margin: auto auto;
+            width: 26rem;
+            height: 26rem;
+        }
+
+        &__buttons {
+            flex-direction: column-reverse;
+
+            .request-btn {
+                margin: 0;
+                width: 100%;
+            }
+
+            .about-service {
+                margin-bottom: 1.2rem;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+
+    @media (max-width: 47.99em) {
+        padding-top: 16rem;
+        padding-bottom: 16rem;
+
+        &__heading {
+            margin-bottom: 8rem;
+        }
+
+        &__tags {
+            &-item {
+                &:not(:last-child) {
+                    margin-bottom: 1.6rem;
+                }
+
+                &__btn {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

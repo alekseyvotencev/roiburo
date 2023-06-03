@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/fonts/fonts.css">
+    <link rel="stylesheet" href="./src/css/main.css">
+    <title>Поисковое продвижение сайтов</title>
+</head>
+
+<body>
+    @@include('./templates/header.html')
+    <main>
+        <section class="hero white-section">
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__left">
+                        <p class="hero__heading heading1">Поисковое продвижение сайтов
+                        </p>
+                        <p class="hero__description">SEO оптимизация сайтов в Яндекс и Google</p>
+                        <ul class="hero__sertificates">
+                            <li class="hero__sertificates-item">
+                                <a href="#" class="hero__sertificates-item__link">
+                                    <img src="./src/images/svg/metrika-black.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="hero__sertificates-item">
+                                <a href="#" class="hero__sertificates-item__link">
+                                    <img src="./src/images/svg/google-black.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hero__right">
+                        <ul class="hero__right-list">
+                            <li class="hero__right-list__item">
+                                <p class="hero__right-list__item-heading">7 лет</p>
+                                <p class="hero__right-list__item-description">Средний опыт сотрудников</p>
+                            </li>
+                            <li class="hero__right-list__item">
+                                <p class="hero__right-list__item-heading">71 человек</p>
+                                <p class="hero__right-list__item-description">Работает в штате</p>
+                            </li>
+                            <li class="hero__right-list__item">
+                                <p class="hero__right-list__item-heading">86 200 заявок</p>
+                                <p class="hero__right-list__item-description">получают наши клиенты за месяц</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button class="request-btn stroke-btn black-stroke">Заказать продвижение сайта</button>
+        </section>
+
+        <section class="tariffs">
+            <div class="container">
+                <div class="tariffs__list">
+                    <div class="tariffs__item">
+                        <p class="tariffs__item-type">Малый</p>
+                        <p class="tariffs__item-heading heading3">Лендинг</p>
+                        <p class="tariffs__item-description">Подходит для небольших сайтов, лендингов с услугами в
+                            сферах с невысокой конкуренцией</p>
+                        <ul class="tariffs__item-options">
+                            <li class="tariffs__item-options__item">
+                                <p>10-100</p>
+                                <p>страниц</p>
+                            </li>
+                            <li class="tariffs__item-options__item">
+                                <p>500-2000 </p>
+                                <p>ключевых слов</p>
+                            </li>
+                            <li class="tariffs__item-options__item">
+                                <p>3-6 месяцев</p>
+                                <p>срок работы</p>
+                            </li>
+                        </ul>
+                        <ul class="tariffs__item-advantages">
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Расширенный аудит сайта</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Настройка счетчиков аналитики</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Подключения Я. Вебмастер и Google Search Console</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Техническая настройка сайта</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item minus">
+                                <img src="./src/images/svg/minus-circle.svg" alt="">
+                                <p>Внутренняя и внешняя оптимизация сайта</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item minus">
+                                <img src="./src/images/svg/minus-circle.svg" alt="">
+                                <p>Контент-менеджмент</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item minus">
+                                <img src="./src/images/svg/minus-circle.svg" alt="">
+                                <p>Рекомендации по доработке сайта (UI/UX)</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item minus">
+                                <img src="./src/images/svg/minus-circle.svg" alt="">
+                                <p>Регулярный анализ позиций конкурентов</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item minus">
+                                <img src="./src/images/svg/minus-circle.svg" alt="">
+                                <p>Управление онлайн-репутацией</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item minus">
+                                <img src="./src/images/svg/minus-circle.svg" alt="">
+                                <p>Еженедельная аналитика по проекту</p>
+                            </li>
+                        </ul>
+                        <button class="tariffs__item-btn defalut-btn white-btn">Выбрать тариф от 19 000 ₽</button>
+                    </div>
+
+                    <div class="tariffs__item">
+                        <p class="tariffs__item-type">Средний</p>
+                        <p class="tariffs__item-heading heading3">Бизнес-сайт</p>
+                        <p class="tariffs__item-description">Подходит для регионального интернет-магазина или сайта в
+                            конкурентной сфере</p>
+                        <ul class="tariffs__item-options">
+                            <li class="tariffs__item-options__item">
+                                <p>10-100</p>
+                                <p>страниц</p>
+                            </li>
+                            <li class="tariffs__item-options__item">
+                                <p>500-2000 </p>
+                                <p>ключевых слов</p>
+                            </li>
+                            <li class="tariffs__item-options__item">
+                                <p>3-6 месяцев</p>
+                                <p>срок работы</p>
+                            </li>
+                        </ul>
+                        <ul class="tariffs__item-advantages">
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Расширенный аудит сайта</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Настройка счетчиков аналитики</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Подключения Я. Вебмастер и Google Search Console</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Техническая настройка сайта</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Внутренняя и внешняя оптимизация сайта</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Контент-менеджмент</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Рекомендации по доработке сайта (UI/UX)</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Регулярный анализ позиций конкурентов</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item minus">
+                                <img src="./src/images/svg/minus-circle.svg" alt="">
+                                <p>Управление онлайн-репутацией</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item minus">
+                                <img src="./src/images/svg/minus-circle.svg" alt="">
+                                <p>Еженедельная аналитика по проекту</p>
+                            </li>
+                        </ul>
+                        <button class="tariffs__item-btn defalut-btn white-btn">Выбрать тариф от 19 000 ₽</button>
+                    </div>
+
+                    <div class="tariffs__item">
+                        <p class="tariffs__item-type">Большой</p>
+                        <p class="tariffs__item-heading heading3">Интернет-магазин</p>
+                        <p class="tariffs__item-description">Подходит для серьезных, амбициозных проектов и
+                            мультирегиональных интернет-магазинов</p>
+                        <ul class="tariffs__item-options">
+                            <li class="tariffs__item-options__item">
+                                <p>10-100</p>
+                                <p>страниц</p>
+                            </li>
+                            <li class="tariffs__item-options__item">
+                                <p>500-2000 </p>
+                                <p>ключевых слов</p>
+                            </li>
+                            <li class="tariffs__item-options__item">
+                                <p>3-6 месяцев</p>
+                                <p>срок работы</p>
+                            </li>
+                        </ul>
+                        <ul class="tariffs__item-advantages">
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Расширенный аудит сайта</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Настройка счетчиков аналитики</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Подключения Я. Вебмастер и Google Search Console</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Техническая настройка сайта</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Внутренняя и внешняя оптимизация сайта</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Контент-менеджмент</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Рекомендации по доработке сайта (UI/UX)</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Регулярный анализ позиций конкурентов</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Управление онлайн-репутацией</p>
+                            </li>
+                            <li class="tariffs__item-advantages__item plus">
+                                <img src="./src/images/svg/check.svg" alt="">
+                                <p>Еженедельная аналитика по проекту</p>
+                            </li>
+                        </ul>
+                        <button class="tariffs__item-btn defalut-btn white-btn">Выбрать тариф от 19 000 ₽</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stages white-section">
+            <div class="container">
+                <div class="stages__content">
+                    <div class="stages__left">
+                        <p class="stages__left-heading heading2">Этапы работ</p>
+                    </div>
+                    <div class="stages__right">
+                        <ul class="stages__right-list">
+                            <li class="stages__right-list__item">
+                                <p class="stages__right-list__item-heading">Первый месяц</p>
+                                <ol class="stages__right-list__item-sublist">
+                                    <li>Технический аудит сайта и поиск ошибок</li>
+                                    <li>Составление технического задания</li>
+                                    <li>Проверка работоспособности форм обратной связи</li>
+                                    <li>Установка целей и событий</li>
+                                    <li>Сбор и распределение ключевых слов</li>
+                                    <li>Установка и проверка сервисов Яндекса и Google</li>
+                                </ol>
+                            </li>
+                            <li class="stages__right-list__item">
+                                <p class="stages__right-list__item-heading">Второй месяц</p>
+                                <ol class="stages__right-list__item-sublist">
+                                    <li>Создание новых продвигаемых страниц</li>
+                                    <li>Написание текстов на новые посадочные страницы</li>
+                                    <li>Написание текстов на новые посадочные страницы</li>
+                                    <li>Корректировка текстов на существующих посадочных страницах</li>
+                                    <li>Анализ конкурентов</li>
+                                    <li>Оптимизация коммерческих факторов на страницах</li>
+                                    <li>Анализ и улучшение процесса индексации сайта</li>
+                                </ol>
+                            </li>
+                            <li class="stages__right-list__item">
+                                <p class="stages__right-list__item-heading">Третий месяц</p>
+                                <ol class="stages__right-list__item-sublist">
+                                    <li>Работа с внутренними ссылками. Улучшение перелинковки</li>
+                                    <li>Проверка корректности и исправление ошибок индексации сайта</li>
+                                    <li>Корректировка семантического ядра</li>
+                                    <li>Аудит ссылочной массы сайта</li>
+                                    <li>Приобретение внешних ссылок на посадочные страницы</li>
+                                </ol>
+                            </li>
+                            <li class="stages__right-list__item">
+                                <p class="stages__right-list__item-heading">Четветый месяц</p>
+                                <ol class="stages__right-list__item-sublist">
+                                    <li>Оценка результатов работы по SEO продвижению</li>
+                                    <li>Usability-аудит сайта и выявление точек роста</li>
+                                    <li>Анализ конкурентов и подготовка рекомендаций</li>
+                                    <li>Проверка текущих позиций сайта в поисковых системах</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="application">
+            <div class="container">
+                <div class="application__content">
+                    <div class="application__left">
+                        <p class="application__left-heading heading2">Узнайте стоимость и сроки продвижения проекта</p>
+                    </div>
+
+                    <div class="application__right">
+                        <form action="#" class="callback-form application__right-form">
+                            <div class="callback-form__input-container communication-method">
+                                <p class="communication-method__text">Связаться со мной по</p>
+                                <div class="communication-method__choice">
+                                    <div class="communication-method__choice-head">
+                                        <p>Телефону</p>
+                                        <img src="./src/images/svg/white-triangle.svg" alt="">
+                                    </div>
+                                    <div class="communication-method__choice-dropdown">
+                                        <ul class="communication-method__choice-dropdown__list">
+                                            <li class="communication-method__choice-dropdown__list-item">
+                                                <button>E-mail</button>
+                                            </li>
+                                            <li class="communication-method__choice-dropdown__list-item">
+                                                <button>Телефон</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="callback-form__input-container">
+                                <input type="text" placeholder="Как вас зовут?" class="callback-form__input">
+                            </div>
+
+                            <div class="callback-form__input-container">
+                                <input type="number" placeholder="+7 (    )    -    - " class="callback-form__input">
+                            </div>
+
+                            <button class="callback-form__btn red-stroke stroke-btn">Отправить</button>
+                            <p class="callback-form__policy">Нажимая на кнопку «Отправить» вы соглашаетесь с политикой
+                                конфиденциальности</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cases white-section">
+            <div class="container">
+                <p class="cases__heading heading2">Кейсы</p>
+                <div class="cases__list">
+                    <div class="cases__item">
+                        <div class="cases__item-top">
+                            <img src="./src/images/cases-img1.png" alt="" class="cases__item-top__img">
+                            <div class="cases__item-info">
+                                <ul class="cases__item-info__list">
+                                    <li class="cases__item-info__list-item">
+                                        <p>50 000</p>
+                                        <p>обращений за 2022 год</p>
+                                    </li>
+                                    <li class="cases__item-info__list-item">
+                                        <p>Каждый 6</p>
+                                        <p>посетитель оставляет обращение </p>
+                                    </li>
+                                </ul>
+                                <div class="cases__item-info__btn">Подробнее</div>
+                                <a href="#" class="cases__item-info__link"></a>
+                            </div>
+                        </div>
+                        <div class="cases__item-bottom">
+                            <p class="cases__item-bottom__subheading">Трубное решение</p>
+                            <p class="cases__item-bottom__heading">Дизайн и разработка. SEO, Контекстная
+                                реклама</p>
+                        </div>
+                    </div>
+
+                    <div class="cases__item">
+                        <div class="cases__item-top">
+                            <img src="./src/images/cases-img1.png" alt="" class="cases__item-top__img">
+                            <div class="cases__item-info">
+                                <ul class="cases__item-info__list">
+                                    <li class="cases__item-info__list-item">
+                                        <p>50 000</p>
+                                        <p>обращений за 2022 год</p>
+                                    </li>
+                                    <li class="cases__item-info__list-item">
+                                        <p>Каждый 6</p>
+                                        <p>посетитель оставляет обращение </p>
+                                    </li>
+                                </ul>
+                                <div class="cases__item-info__btn">Подробнее</div>
+                                <a href="#" class="cases__item-info__link"></a>
+                            </div>
+                        </div>
+                        <div class="cases__item-bottom">
+                            <p class="cases__item-bottom__subheading">ГК Интерстилс</p>
+                            <p class="cases__item-bottom__heading">Дизайн и разработка. Продвижение. SEO, Контекстная
+                                реклама</p>
+                        </div>
+                    </div>
+
+                    <div class="cases__item">
+                        <div class="cases__item-top">
+                            <img src="./src/images/cases-img2.png" alt="" class="cases__item-top__img">
+                            <div class="cases__item-info">
+                                <ul class="cases__item-info__list">
+                                    <li class="cases__item-info__list-item">
+                                        <p>50 000</p>
+                                        <p>обращений за 2022 год</p>
+                                    </li>
+                                    <li class="cases__item-info__list-item">
+                                        <p>Каждый 6</p>
+                                        <p>посетитель оставляет обращение </p>
+                                    </li>
+                                </ul>
+                                <div class="cases__item-info__btn">Подробнее</div>
+                                <a href="#" class="cases__item-info__link"></a>
+                            </div>
+                        </div>
+                        <div class="cases__item-bottom">
+                            <p class="cases__item-bottom__subheading">Инвета</p>
+                            <p class="cases__item-bottom__heading">Дизайн и разработка. Контекстная реклама</p>
+                        </div>
+                    </div>
+
+                    <div class="cases__item">
+                        <div class="cases__item-top">
+                            <img src="./src/images/cases-img2.png" alt="" class="cases__item-top__img">
+                            <div class="cases__item-info">
+                                <ul class="cases__item-info__list">
+                                    <li class="cases__item-info__list-item">
+                                        <p>50 000</p>
+                                        <p>обращений за 2022 год</p>
+                                    </li>
+                                    <li class="cases__item-info__list-item">
+                                        <p>Каждый 6</p>
+                                        <p>посетитель оставляет обращение </p>
+                                    </li>
+                                </ul>
+                                <div class="cases__item-info__btn">Подробнее</div>
+                                <a href="#" class="cases__item-info__link"></a>
+                            </div>
+                        </div>
+                        <div class="cases__item-bottom">
+                            <p class="cases__item-bottom__subheading">ЖК Фрукты</p>
+                            <p class="cases__item-bottom__heading">Дизайн и разработка. Контекстная реклама</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="thanks-letters">
+            <div class="container">
+                <p class="thanks-letters__heading heading2">Благодарственные письма</p>
+                <ul class="thanks-letters__list">
+                    <li class="thanks-letters__list-item">
+                        <img src="./src/images/thansks-letters1.png" alt="" class="thanks-letters__list-item__img">
+                    </li>
+                    <li class="thanks-letters__list-item">
+                        <img src="./src/images/thansks-letters2.png" alt="" class="thanks-letters__list-item__img">
+                    </li>
+                    <li class="thanks-letters__list-item">
+                        <img src="./src/images/thansks-letters1.png" alt="" class="thanks-letters__list-item__img">
+                    </li>
+                    <li class="thanks-letters__list-item">
+                        <img src="./src/images/thansks-letters2.png" alt="" class="thanks-letters__list-item__img">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="qa">
+            <div class="container">
+                <p class="qa__heading heading2">Вопрос/ответ</p>
+
+                <div class="qa__accordion">
+                    <div class="qa__accordion-item acc-item">
+                        <div class="qa__accordion-item__head acc-head">
+                            <p>Что такое SEO-продвижение?</p>
+                            <img src="./src/images/svg/chevron-down.svg" alt="">
+                        </div>
+                        <div class="qa__accordion-item__content acc-content">
+                            <p>Поисковое продвижение набор методов и мер по оптимизации структуры сайта, его технических
+                                характеристик, контента и кода по рекомендациям поисковых систем. Продвижение включает в
+                                себя аудит сайта, сбор семантического ядра, добавление новых страниц, корректировка
+                                текстов, добавление мета-тегов, исправление технических ошибок, внешнюю оптимизацию и
+                                еще множество различных параметров.</p>
+                        </div>
+                    </div>
+
+                    <div class="qa__accordion-item acc-item">
+                        <div class="qa__accordion-item__head acc-head">
+                            <p>Какому бизнесу подойдет SEO-продвижение?</p>
+                            <img src="./src/images/svg/chevron-down.svg" alt="">
+                        </div>
+                        <div class="qa__accordion-item__content acc-content">
+                            <p>Поисковое продвижение набор методов и мер по оптимизации структуры сайта, его технических
+                                характеристик, контента и кода по рекомендациям поисковых систем. Продвижение включает в
+                                себя аудит сайта, сбор семантического ядра, добавление новых страниц, корректировка
+                                текстов, добавление мета-тегов, исправление технических ошибок, внешнюю оптимизацию и
+                                еще множество различных параметров.</p>
+                        </div>
+                    </div>
+
+                    <div class="qa__accordion-item acc-item">
+                        <div class="qa__accordion-item__head acc-head">
+                            <p>Какие работы вы проделываете при SEO-оптимизации сайтов?</p>
+                            <img src="./src/images/svg/chevron-down.svg" alt="">
+                        </div>
+                        <div class="qa__accordion-item__content acc-content">
+                            <p>Поисковое продвижение набор методов и мер по оптимизации структуры сайта, его технических
+                                характеристик, контента и кода по рекомендациям поисковых систем. Продвижение включает в
+                                себя аудит сайта, сбор семантического ядра, добавление новых страниц, корректировка
+                                текстов, добавление мета-тегов, исправление технических ошибок, внешнюю оптимизацию и
+                                еще множество различных параметров.</p>
+                        </div>
+                    </div>
+
+                    <div class="qa__accordion-item acc-item">
+                        <div class="qa__accordion-item__head acc-head">
+                            <p>Сколько по времени занимает SEO продвижение, когда появятся первые результаты?</p>
+                            <img src="./src/images/svg/chevron-down.svg" alt="">
+                        </div>
+                        <div class="qa__accordion-item__content acc-content">
+                            <p>Поисковое продвижение набор методов и мер по оптимизации структуры сайта, его технических
+                                характеристик, контента и кода по рекомендациям поисковых систем. Продвижение включает в
+                                себя аудит сайта, сбор семантического ядра, добавление новых страниц, корректировка
+                                текстов, добавление мета-тегов, исправление технических ошибок, внешнюю оптимизацию и
+                                еще множество различных параметров.</p>
+                        </div>
+                    </div>
+
+                    <div class="qa__accordion-item acc-item">
+                        <div class="qa__accordion-item__head acc-head">
+                            <p>Как мы будем проверять вашу работу по SEO-продвижению?</p>
+                            <img src="./src/images/svg/chevron-down.svg" alt="">
+                        </div>
+                        <div class="qa__accordion-item__content acc-content">
+                            <p>Поисковое продвижение набор методов и мер по оптимизации структуры сайта, его технических
+                                характеристик, контента и кода по рекомендациям поисковых систем. Продвижение включает в
+                                себя аудит сайта, сбор семантического ядра, добавление новых страниц, корректировка
+                                текстов, добавление мета-тегов, исправление технических ошибок, внешнюю оптимизацию и
+                                еще множество различных параметров.</p>
+                        </div>
+                    </div>
+
+                    <div class="qa__accordion-item acc-item">
+                        <div class="qa__accordion-item__head acc-head">
+                            <p>Что выгодней, SEO или контекстная реклама?</p>
+                            <img src="./src/images/svg/chevron-down.svg" alt="">
+                        </div>
+                        <div class="qa__accordion-item__content acc-content">
+                            <p>Поисковое продвижение набор методов и мер по оптимизации структуры сайта, его технических
+                                характеристик, контента и кода по рекомендациям поисковых систем. Продвижение включает в
+                                себя аудит сайта, сбор семантического ядра, добавление новых страниц, корректировка
+                                текстов, добавление мета-тегов, исправление технических ошибок, внешнюю оптимизацию и
+                                еще множество различных параметров.</p>
+                        </div>
+                    </div>
+
+                    <div class="qa__accordion-item acc-item">
+                        <div class="qa__accordion-item__head acc-head">
+                            <p>Контекстная реклама и SEO совместимы?</p>
+                            <img src="./src/images/svg/chevron-down.svg" alt="">
+                        </div>
+                        <div class="qa__accordion-item__content acc-content">
+                            <p>Поисковое продвижение набор методов и мер по оптимизации структуры сайта, его технических
+                                характеристик, контента и кода по рекомендациям поисковых систем. Продвижение включает в
+                                себя аудит сайта, сбор семантического ядра, добавление новых страниц, корректировка
+                                текстов, добавление мета-тегов, исправление технических ошибок, внешнюю оптимизацию и
+                                еще множество различных параметров.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('./templates/footer.html')
+</body>
+
+</html>

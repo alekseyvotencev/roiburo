@@ -1,0 +1,64 @@
+.stages {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__left {
+        padding-top: 2.4rem;
+        width: 39.2rem;
+    }
+
+    &__right {
+        width: 80.8rem;
+
+        &-list {
+            &__item {
+                padding-top: 3.2rem;
+                padding-bottom: 4rem;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                border-bottom: 1px solid rgba(15, 15, 16, 0.2);
+
+                &-heading {
+                    width: 20rem;
+                    font-size: 2rem;
+                    line-height: 2.8rem;
+                }
+
+                &-sublist {
+                    padding: 0;
+                    width: 56.8rem;
+                    font-size: 1.6rem;
+                    line-height: 2.2rem;
+                    list-style-type: none;
+                    counter-reset: num;
+
+                    li {
+                        position: relative;
+                        padding-left: 2.4rem;
+
+                        &:not(:last-child) {
+                            margin-bottom: 0.8rem;
+                        }
+
+                        &::before {
+                            content: counter(num) ".";
+                            counter-increment: num;
+                            display: inline-block;
+                            position: absolute;
+                            top: 0px;
+                            left: 0;
+                            color: #989899;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

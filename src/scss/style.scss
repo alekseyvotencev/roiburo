@@ -1,0 +1,32 @@
+@import "set";
+@import "components";
+@import "../fonts/fonts";
+
+@import "header";
+@import "footer";
+
+@import "hero";
+@import "services";
+@import "cases";
+@import "thanks-letters";
+@import "team";
+@import "tariffs";
+@import "stages";
+@import "application";
+@import "qa";
+
+body.lock {
+    overflow: hidden;
+}
+
+@media (min-width: 62.01em) {
+    .mobile {
+        display: none !important;
+    }
+}
+
+@media (max-width: 62em) {
+    .desktop {
+        display: none !important;
+    }
+}

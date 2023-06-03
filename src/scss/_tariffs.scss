@@ -1,0 +1,129 @@
+.tariffs {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__list {
+        display: flex;
+        gap: 2.4rem;
+    }
+
+    &__item {
+        width: 39.2rem;
+        position: relative;
+
+        &:hover {
+            .tariffs__item-btn {
+                border-color: #fe014d;
+                background-color: transparent;
+                color: $white;
+            }
+        }
+
+        &-type {
+            margin-bottom: 0.4rem;
+            font-weight: 500;
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+            color: $green;
+        }
+
+        &-heading {
+            margin-bottom: 1.6rem;
+        }
+
+        &-description {
+            margin-bottom: 1.6rem;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            color: #f4f4f4;
+        }
+
+        &-options {
+            margin-bottom: 4rem;
+            display: flex;
+
+            &__item {
+                padding: 0px 0px 0px 1.2rem;
+                border-left: 1px solid $white;
+
+                &:not(:last-child) {
+                    margin-right: 2.4rem;
+                }
+
+                p {
+                    &:first-child {
+                        font-weight: 500;
+                        font-size: 1.5rem;
+                        line-height: 2.1rem;
+                        color: #f4f4f4;
+                    }
+
+                    &:last-child {
+                        font-size: 1.3rem;
+                        line-height: 1.8rem;
+                        color: #989899;
+                    }
+                }
+            }
+        }
+
+        &-advantages {
+            margin-bottom: 4rem;
+
+            &__item {
+                padding-top: 0.8rem;
+                padding-bottom: 0.8rem;
+                display: flex;
+                align-items: center;
+                gap: 0.8rem;
+                border-top: 1px solid #1a1a1b;
+
+                &:last-child {
+                    border-bottom: 1px solid #1a1a1b;
+                }
+
+                &.plus {
+                    p {
+                        color: #c6c6c6;
+                    }
+                }
+
+                &.minus {
+                    p {
+                        color: #3d3d3e;
+                    }
+                }
+
+                img {
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    object-fit: contain;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                    line-height: 1.6rem;
+                }
+            }
+        }
+
+        &-btn {
+            width: 100%;
+            border: 1px solid $white;
+            transition-property: border-color, background-color, color;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in-out;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

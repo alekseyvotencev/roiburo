@@ -1,0 +1,342 @@
+$white: #fff;
+$black: #0f0f10;
+$green: #c9fa02;
+$red: #fe014d;
+
+.heading1 {
+    font-weight: 500;
+    font-size: 4.8rem;
+    line-height: 5.8rem;
+    letter-spacing: -0.01em;
+
+    @media (max-width: 62em) {
+        font-size: 4rem;
+        line-height: 5.6rem;
+    }
+
+    @media (max-width: 47.99em) {
+        font-size: 6.4rem;
+        line-height: 7.6rem;
+    }
+}
+
+.heading2 {
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 5.6rem;
+    letter-spacing: -0.01em;
+
+    @media (max-width: 62em) {
+        font-size: 3.2rem;
+        line-height: 3.8rem;
+    }
+
+    @media (max-width: 47.99em) {
+        font-size: 6.4rem;
+        line-height: 7.6rem;
+    }
+}
+
+.heading3 {
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+    letter-spacing: -0.01em;
+
+    @media (max-width: 47.99em) {
+        font-size: 6.4rem;
+        line-height: 7.6rem;
+    }
+}
+
+.white-section {
+    color: $black;
+    background-color: $white;
+}
+
+.defalut-btn {
+    padding: 1.6rem 4rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: $white;
+    text-align: center;
+    background-color: $red;
+    border-radius: 4.8rem;
+
+    @media (max-width: 47.99em) {
+        padding: 3.2rem 8rem;
+        font-size: 3.2rem;
+        line-height: 4.8rem;
+        border-radius: 9.6rem;
+    }
+}
+
+.white-btn {
+    background-color: $white;
+    color: $black;
+}
+
+.stroke-btn {
+    padding: 1.6rem 2rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4.8rem;
+
+    @media (max-width: 47.99em) {
+        padding: 3.2rem 4rem;
+        font-size: 3.2rem;
+        line-height: 4.8rem;
+        border-radius: 9.6rem;
+    }
+}
+
+.tab-btn {
+    padding: 1.6rem 2.4rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: $white;
+    background-color: $black;
+    border-radius: 1.2rem;
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+
+    &:hover:not(:focus-visible) {
+        color: $green;
+    }
+
+    &.active {
+        background-color: $green;
+        color: $black;
+    }
+
+    @media (max-width: 62em) {
+        gap: 0.8rem;
+
+        img {
+            width: 2.4rem;
+            height: 2.4rem;
+            object-fit: contain;
+        }
+    }
+
+    @media (max-width: 47.99em) {
+        padding: 3.2rem 4.8rem;
+        font-size: 3.2rem;
+        line-height: 4.8rem;
+        gap: 1.6rem;
+        border-radius: 2.4rem;
+
+        img {
+            width: 4.8rem;
+            height: 4.8rem;
+            object-fit: contain;
+        }
+    }
+}
+
+.white-stroke {
+    border-color: $white;
+    color: $white;
+}
+
+.black-stroke {
+    border-color: $black;
+    color: $black;
+}
+
+.red-stroke {
+    border-color: $red;
+    color: $white;
+}
+
+.callback-form {
+    &__input-container {
+        padding: 2.1rem 0;
+        border-bottom: 1px solid #c6c6c6;
+
+        &.communication-method {
+            display: flex;
+            align-items: center;
+
+            &.active {
+                .communication-method__choice {
+                    &-head {
+                        img {
+                            transform: rotate(180deg);
+                        }
+                    }
+
+                    &-dropdown {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+
+            .communication-method__text {
+                margin-right: 0.8rem;
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                color: #3d3d3e;
+            }
+
+            .communication-method__choice {
+                position: relative;
+
+                &-head {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                    p {
+                        margin-right: 0.8rem;
+                        font-weight: 500;
+                        font-size: 1.6rem;
+                        line-height: 2.2rem;
+                    }
+
+                    img {
+                        width: 1.2rem;
+                        height: 0.6rem;
+                        object-fit: contain;
+                        transition: transform 0.2s ease-in-out;
+                    }
+                }
+
+                &-dropdown {
+                    padding: 0.8rem 1.6rem;
+                    position: absolute;
+                    top: calc(100% + 1rem);
+                    left: 0;
+                    width: 22.4rem;
+                    background-color: $white;
+                    border: 1px solid $black;
+                    border-radius: 2rem;
+                    font-size: 1.5rem;
+                    line-height: 2.4rem;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition-property: opacity, visibility;
+                    transition-duration: 0.2s;
+                    transition-timing-function: ease-in-out;
+
+                    &__list {
+                        &-item {
+                            button {
+                                padding-top: 0.5rem;
+                                padding-bottom: 0.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__input {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        color: #3d3d3e;
+
+        &::placeholder {
+            color: #3d3d3e;
+        }
+    }
+
+    &__btn {
+        margin-top: 4.8rem;
+        margin-bottom: 2.8rem;
+        width: 100%;
+    }
+
+    &__policy {
+        font-weight: 300;
+        font-size: 1.2rem;
+        line-height: 2.4rem;
+        color: #a2a2a2;
+        text-align: center;
+    }
+
+    @media (max-width: 47.99em) {
+        &__input-container {
+            padding: 4.2rem 0;
+
+            &.communication-method {
+                .communication-method__text {
+                    margin-right: 1.6rem;
+                    font-size: 3.2rem;
+                    line-height: 4.4rem;
+                }
+
+                .communication-method__choice {
+                    position: relative;
+
+                    &-head {
+                        p {
+                            margin-right: 1.6rem;
+                            font-size: 3.2rem;
+                            line-height: 4.4rem;
+                        }
+
+                        img {
+                            width: 2.4rem;
+                            height: 1.2rem;
+                        }
+                    }
+
+                    &-dropdown {
+                        padding: 0.8rem 1.6rem;
+                        position: absolute;
+                        top: calc(100% + 1rem);
+                        left: 0;
+                        width: 22.4rem;
+                        background-color: $white;
+                        border: 1px solid $black;
+                        border-radius: 2rem;
+                        font-size: 1.5rem;
+                        line-height: 2.4rem;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition-property: opacity, visibility;
+                        transition-duration: 0.2s;
+                        transition-timing-function: ease-in-out;
+
+                        &__list {
+                            &-item {
+                                button {
+                                    padding-top: 0.5rem;
+                                    padding-bottom: 0.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__input {
+            font-size: 3.2rem;
+            line-height: 4.4rem;
+        }
+
+        &__btn {
+            margin-top: 9.6rem;
+            margin-bottom: 2.4rem;
+        }
+
+        &__policy {
+            font-size: 2.4rem;
+            line-height: 4.8rem;
+        }
+    }
+}

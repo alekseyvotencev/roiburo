@@ -1,0 +1,206 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+
+    &.white-section {
+        .hero__right {
+            border-color: $black;
+
+            &-list {
+                &__item {
+                    &-description {
+                        color: #1a1a1b;
+                    }
+                }
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__left {
+        width: 80.8rem;
+    }
+
+    &__heading {
+        margin-bottom: 1.2rem;
+    }
+
+    &__description {
+        margin-bottom: 4rem;
+        font-size: 2.4rem;
+        line-height: 3.4rem;
+        color: #1a1a1b;
+    }
+
+    &__sertificates {
+        margin-top: 4rem;
+        display: flex;
+
+        &-item {
+            &:not(:last-child) {
+                margin-right: 0.8rem;
+            }
+
+            &__link {
+                padding-left: 1.6rem;
+                padding-right: 1.6rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 8rem;
+                border: 1px solid #989899;
+                border-radius: 2.4rem;
+
+                img {
+                    height: 6.1rem;
+                    width: auto;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+
+    &__right {
+        padding-left: 3.2rem;
+        width: 39rem;
+        border-left: 1px solid #f4f4f4;
+
+        &-list {
+            &__item {
+                &:not(:last-child) {
+                    margin-bottom: 1.6rem;
+                }
+
+                &-heading {
+                    font-weight: 500;
+                    font-size: 2.4rem;
+                    line-height: 2.9rem;
+                }
+
+                &-description {
+                    font-size: 1.6rem;
+                    line-height: 2.2rem;
+                    color: #f4f4f4;
+                }
+            }
+        }
+    }
+
+    .request-btn {
+        position: absolute;
+        bottom: 4rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @media (max-width: 62em) {
+        padding-top: 28.5rem;
+        padding-bottom: 30.9rem;
+        display: block;
+        height: auto;
+
+        &__content {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        &__left {
+            margin-bottom: 4rem;
+            width: 100%;
+        }
+
+        &__right {
+            padding-left: 2.4rem;
+            width: 100%;
+            &-list {
+                &__item {
+                    &:not(:last-child) {
+                        margin-bottom: 1.6rem;
+                    }
+
+                    &-heading {
+                        font-size: 1.6rem;
+                        line-height: 2.2rem;
+                    }
+
+                    &-description {
+                        font-size: 1.4rem;
+                        line-height: 2rem;
+                    }
+                }
+            }
+        }
+
+        .request-btn {
+            bottom: 2.4rem;
+        }
+    }
+
+    @media (max-width: 47.99em) {
+        padding-top: 37.7rem;
+        padding-bottom: 37.7rem;
+
+        &__heading {
+            margin-bottom: 2.4rem;
+        }
+
+        &__left {
+            margin-bottom: 9.6rem;
+        }
+
+        &__sertificates {
+            margin-top: 3.2rem;
+
+            &-item {
+                &:not(:last-child) {
+                    margin-right: 1.6rem;
+                }
+
+                &__link {
+                    padding-left: 2.2rem;
+                    padding-right: 2.2rem;
+                    height: 12rem;
+                    border-radius: 4.8rem;
+
+                    img {
+                        height: 9rem;
+                    }
+                }
+            }
+        }
+
+        &__right {
+            padding-left: 4.8rem;
+
+            &-list {
+                &__item {
+                    &:not(:last-child) {
+                        margin-bottom: 3.2rem;
+                    }
+
+                    &-heading {
+                        font-size: 3.2rem;
+                        line-height: 4.4rem;
+                    }
+
+                    &-description {
+                        font-size: 2.8rem;
+                        line-height: 4rem;
+                    }
+                }
+            }
+        }
+
+        .request-btn {
+            width: 38.6rem;
+        }
+    }
+}

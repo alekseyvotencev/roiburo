@@ -1,0 +1,45 @@
+.application {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__left {
+        width: 70.7rem;
+    }
+
+    &__right {
+        padding: 1.1rem 4rem;
+        width: 49.6rem;
+
+        .callback-form {
+            &__input-container {
+                &.communication-method {
+                    .communication-method__text {
+                        color: #dddddd;
+                    }
+
+                    .communication-method__choice {
+                        &-dropdown {
+                            color: $black;
+                        }
+                    }
+                }
+            }
+
+            &__input {
+                color: #dddddd;
+
+                &::placeholder {
+                    color: #dddddd;
+                }
+            }
+        }
+    }
+}
