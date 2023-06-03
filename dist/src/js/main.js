@@ -119,4 +119,30 @@ document.addEventListener('DOMContentLoaded', function () {
         html.classList.toggle('lock');
         headerMenu.classList.toggle('active');
     })
+
+    // выбор способа связи в форме
+    if (document.querySelector('.callback-form')) {
+        let callbackForms = document.querySelectorAll('.callback-form');
+        callbackForms.forEach(form => {
+            let choiceBtn = form.querySelector('.communication-method__choice-head');
+            let communicationMethodBlock = form.querySelector('.communication-method');
+            choiceBtn.addEventListener('click', function () {
+                communicationMethodBlock.classList.toggle('active');
+            })
+            let commMethodField = form.querySelector('.communication-method__choice-head > p');
+            let commMethodBtns = form.querySelectorAll('.communication-method__choice-dropdown__list-item > button');
+            commMethodBtns.forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    let btnText = btn.innerText;
+                    if (btnText === 'E-mail') {
+                        commMethodField.innerText = 'E-mail';
+                    } else if (btnText === 'Телефон') {
+                        commMethodField.innerText = 'Телефону';
+                    }
+                    communicationMethodBlock.classList.remove('active');
+                })
+            })
+        })
+    }
 })
