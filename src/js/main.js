@@ -55,6 +55,16 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
+    if (document.querySelector('.header__contacts')) {
+        let headerContacts = document.querySelector('.header__contacts');
+        let headerContactsBtn = header.querySelector('.header__phone');
+        headerContactsDropdown = header.querySelector('.header__contacts-dropdown');
+        headerContactsBtn.addEventListener('click', function () {
+            headerContactsDropdown.classList.toggle('active');
+            clickOutside(headerContacts, headerContactsDropdown)
+        })
+    }
+
     // аккордеоны
 
     function initAccordion(accordion) {
@@ -88,6 +98,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (document.querySelector('.stages__right-list') && window.innerWidth < 768) {
         initAccordion(document.querySelector('.stages__right-list'));
+    }
+
+    // аккордеон в qa
+
+    if (document.querySelector('.qa__accordion')) {
+        initAccordion(document.querySelector('.qa__accordion'))
     }
 
     // табы

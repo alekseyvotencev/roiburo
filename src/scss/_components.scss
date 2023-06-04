@@ -64,6 +64,17 @@ $red: #fe014d;
     background-color: $red;
     border-radius: 4.8rem;
 
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+
+    svg {
+        path,
+        rect {
+            transition: fill 0.2s ease-in-out;
+        }
+    }
+
     @media (max-width: 47.99em) {
         padding: 3.2rem 8rem;
         font-size: 3.2rem;
@@ -86,6 +97,17 @@ $red: #fe014d;
     border-width: 1px;
     border-style: solid;
     border-radius: 4.8rem;
+
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+
+    svg {
+        path,
+        rect {
+            transition: fill 0.2s ease-in-out;
+        }
+    }
 
     @media (max-width: 47.99em) {
         padding: 3.2rem 4rem;
@@ -157,6 +179,25 @@ $red: #fe014d;
 .white-stroke {
     border-color: $white;
     color: $white;
+
+    svg {
+        path,
+        rect {
+            transition: fill 0.2s ease-in-out;
+        }
+    }
+
+    &:hover:not(:focus-visible) {
+        background-color: $white;
+        color: $black;
+
+        svg {
+            path,
+            rect {
+                fill: $black;
+            }
+        }
+    }
 }
 
 .black-stroke {
@@ -167,6 +208,10 @@ $red: #fe014d;
 .red-stroke {
     border-color: $red;
     color: $white;
+
+    &:hover {
+        background-color: $red;
+    }
 }
 
 .callback-form {
@@ -437,5 +482,18 @@ $red: #fe014d;
             font-size: 6.4rem;
             line-height: 7.6rem;
         }
+    }
+}
+
+.link {
+    display: inline-block;
+    color: #c6c6c6;
+    transition-property: color, transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+        color: $white;
+        transform: translateX(0.8rem);
     }
 }

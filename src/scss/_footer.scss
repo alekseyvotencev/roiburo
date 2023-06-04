@@ -33,11 +33,15 @@
                         margin-bottom: 1.2rem;
                     }
 
-                    p,
-                    a {
+                    p {
                         font-size: 1.6rem;
                         line-height: 2.4rem;
                         color: #c6c6c6;
+                    }
+
+                    a {
+                        font-size: 1.6rem;
+                        line-height: 2.4rem;
                     }
                 }
             }
@@ -224,7 +228,7 @@
                 line-height: 3.4rem;
 
                 p {
-                    margin-bottom: .8rem;
+                    margin-bottom: 0.8rem;
                 }
             }
         }

@@ -23,11 +23,60 @@
         }
     }
 
-    &__phone {
+    &__contacts {
         margin-left: auto;
         margin-right: 1.2rem;
+        position: relative;
+
+        &-dropdown {
+            padding: 0.8rem 1.6rem;
+            position: absolute;
+            top: calc(100% + 0.8rem);
+            width: max-content;
+            background-color: #f4f4f4;
+            border: 1px solid #0f0f10;
+            border-radius: 2rem;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1;
+            transition-property: opacity, visibility;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in-out;
+
+            &.active {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &-list {
+            &__item {
+                &-btn,
+                &-link {
+                    padding-top: 1.2rem;
+                    padding-bottom: 1.2rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.8rem;
+                    font-size: 1.5rem;
+                    line-height: 2.4rem;
+                    color: $black;
+
+                    svg {
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+
+    &__phone {
         padding: 0.8rem 1.6rem;
         display: inline-block;
+        position: relative;
+        font-weight: 400;
         font-size: 1.5rem;
         line-height: 2.4rem;
         border: 1px solid $white;
@@ -35,6 +84,10 @@
         mix-blend-mode: difference;
         isolation: auto;
         z-index: 1;
+
+        transition-property: background-color, color;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
     }
 
     &__burger {
@@ -48,6 +101,10 @@
         border-radius: 50%;
         mix-blend-mode: difference;
         z-index: 1;
+
+        transition-property: background-color, color;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
 
         svg {
             width: 1.6rem;
@@ -191,6 +248,10 @@
                     font-size: 2rem;
                     line-height: 2.8rem;
                     color: #1a1a1b;
+
+                    &:hover {
+                        color: #1a1a1b;
+                    }
                 }
             }
         }

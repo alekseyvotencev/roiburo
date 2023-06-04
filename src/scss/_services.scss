@@ -70,9 +70,21 @@
                 }
             }
 
-            img {
+            svg {
                 width: 2.4rem;
                 height: 2.4rem;
+            }
+
+            &:hover {
+                background-color: $red;
+                color: $white;
+
+                svg {
+                    path,
+                    rect {
+                        fill: $white;
+                    }
+                }
             }
         }
     }
@@ -247,7 +259,7 @@
             .about-service {
                 padding: 3.2rem;
 
-                img {
+                svg {
                     width: 4.8rem;
                     height: 4.8rem;
                 }
