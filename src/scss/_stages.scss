@@ -61,4 +61,122 @@
             }
         }
     }
+
+    @media (max-width: 62em) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+
+        &__content {
+            flex-direction: column;
+        }
+
+        &__left {
+            padding-top: 0;
+            width: 100%;
+
+            &-heading {
+                margin-bottom: 2.4rem;
+            }
+        }
+
+        &__right {
+            width: 100%;
+
+            &-list {
+                &__item {
+                    &-sublist {
+                        width: 48rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 47.99em) {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+
+        &__left {
+            &-heading {
+                margin-bottom: 4.8rem;
+            }
+        }
+
+        &__right {
+            &-list {
+                &__item {
+                    padding: 3.2rem;
+                    flex-direction: column;
+                    border: 1px solid rgba(15, 15, 16, 0.2);
+                    border-radius: 2.4rem;
+
+                    &:not(:last-child) {
+                        margin-bottom: 1.6rem;
+                    }
+
+                    &.active {
+                        .acc-head {
+                            img {
+                                transform: rotate(180deg);
+                            }
+                        }
+
+                        .acc-content {
+                            padding-top: 4.8rem;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+
+                    &-head {
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        width: 100%;
+
+                        img {
+                            width: 4.8rem;
+                            height: 4.8rem;
+                            transition: transform 0.3s ease-in-out;
+                        }
+                    }
+
+                    &-heading {
+                        width: auto;
+                        font-size: 4rem;
+                        line-height: 5.6rem;
+                    }
+
+                    &-content {
+                        max-height: 0;
+                        opacity: 0;
+                        visibility: hidden;
+                        overflow-y: hidden;
+                        transition-property: opacity, visibility, max-height, padding;
+                        transition-duration: .3s;
+                        transition-timing-function: ease-in-out;
+                    }
+
+                    &-sublist {
+                        width: 100%;
+                        font-size: 3.2rem;
+                        line-height: 4.4rem;
+
+                        li {
+                            padding: 3.4rem 0 3.4rem 4.8rem;
+                            border-bottom: 1px solid #989899;
+
+                            &:not(:last-child) {
+                                margin-bottom: 0;
+                            }
+
+                            &::before {
+                                top: 3.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

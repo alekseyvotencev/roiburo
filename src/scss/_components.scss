@@ -110,22 +110,32 @@ $red: #fe014d;
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
 
-    &:hover:not(:focus-visible) {
+    &:hover:not(:focus-visible):not(.active) {
         color: $green;
     }
 
     &.active {
         background-color: $green;
         color: $black;
+
+        svg {
+            path {
+                fill: $black;
+            }
+        }
     }
 
     @media (max-width: 62em) {
         gap: 0.8rem;
 
-        img {
+        svg {
             width: 2.4rem;
             height: 2.4rem;
             object-fit: contain;
+
+            path {
+                transition: fill 0.2s ease-in-out;
+            }
         }
     }
 
@@ -272,7 +282,6 @@ $red: #fe014d;
             padding: 4.2rem 0;
 
             &.communication-method {
-
                 .communication-method__text {
                     margin-right: 1.6rem;
                     font-size: 3.2rem;
@@ -327,6 +336,106 @@ $red: #fe014d;
         &__policy {
             font-size: 2.4rem;
             line-height: 4.8rem;
+        }
+    }
+}
+
+.request-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+    color: $black;
+    transform: translateY(-100%);
+    z-index: 3;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
+    &.active {
+        transform: translateY(0);
+    }
+
+    &__close {
+        position: absolute;
+        top: 2rem;
+        right: 35rem;
+
+        svg {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+
+    &__body {
+        width: 56rem;
+    }
+
+    &__heading {
+        margin-bottom: 2.4rem;
+        font-weight: 500;
+        font-size: 3.2rem;
+        line-height: 3.8rem;
+        color: #27292d;
+    }
+
+    @media (max-width: 62em) {
+        left: auto;
+        right: 0;
+        transform: translateX(100%);
+        width: 51.7rem;
+
+        &__close {
+            top: 1.6rem;
+            right: 2.6rem;
+        }
+
+        &__body {
+            width: 100%;
+        }
+
+        &.active {
+            transform: translateX(0);
+        }
+    }
+
+    @media (max-width: 47.99em) {
+        width: 100%;
+
+        &__close {
+            top: 3rem;
+            right: 3rem;
+
+            svg {
+                width: 8rem;
+                height: 8rem;
+            }
+        }
+
+        &__body {
+            padding-top: 35.6rem;
+            padding-bottom: 35.6rem;
+        }
+
+        &__heading {
+            margin-bottom: 4.8rem;
+            font-size: 6.4rem;
+            line-height: 7.6rem;
         }
     }
 }

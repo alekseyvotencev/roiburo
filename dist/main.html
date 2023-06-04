@@ -130,7 +130,21 @@
                     <div class="services__left">
                         <div class="services__content">
                             <p class="services__heading heading2">Предложения для вашего бизнеса</p>
-                            <div class="services__item">
+                            <div class="services__item desktop" data-target="site-creation">
+                                <p class="services__item-heading mobile">Создание сайта</p>
+                                <p class="services__description">Создание сайта</p>
+                                <p class="services__item-price mobile">От 35 000₽ </p>
+                                <img src="./src/images/svg/services-icon.svg" alt="" class="services__icon">
+                                <div class="services__buttons">
+                                    <button class="defalut-btn request-btn">Оставить заявку</button>
+                                    <button class="stroke-btn about-service">
+                                        <span class="desktop">От 35 000₽</span>
+                                        <span>Подробнее об услуге </span>
+                                        <img src="./src/images/svg/chevron-right.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="services__item desktop" data-target="seo">
                                 <p class="services__item-heading mobile">SEO продвижение</p>
                                 <p class="services__description">Аудит контекстной рекламы. Контекстная реклама. <br>
                                     Яндекс Директ и Google Ads «под ключ»</p>
@@ -151,57 +165,102 @@
                     <div class="services__right">
                         <ul class="services__tags">
                             <li class="services__tags-item">
-                                <button class="services__tags-item__btn tab-btn">
+                                <button class="services__tags-item__btn tab-btn" data-path="site-creation">
                                     <span>Создание сайта</span>
-                                    <img src="./src/images/svg/white-chevron-right.svg" alt="" class="mobile">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="mobile">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16.0733 10.5144L10.4142 4.85535L9 6.26956L14.659 11.9286L9.00187 17.5858L10.4161 19L17.488 11.9281L16.0738 10.5139L16.0733 10.5144Z"
+                                            fill="white" />
+                                    </svg>
                                 </button>
                             </li>
                             <li class="services__tags-item">
-                                <button class="services__tags-item__btn tab-btn">
+                                <button class="services__tags-item__btn tab-btn" data-path="seo">
                                     <span>SEO продвижение</span>
-                                    <img src="./src/images/svg/white-chevron-right.svg" alt="" class="mobile">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="mobile">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16.0733 10.5144L10.4142 4.85535L9 6.26956L14.659 11.9286L9.00187 17.5858L10.4161 19L17.488 11.9281L16.0738 10.5139L16.0733 10.5144Z"
+                                            fill="white" />
+                                    </svg>
                                 </button>
                             </li>
                             <li class="services__tags-item">
-                                <button class="services__tags-item__btn tab-btn">
+                                <button class="services__tags-item__btn tab-btn" data-path="contextual-advertising">
                                     <span>Контекстная реклама</span>
-                                    <img src="./src/images/svg/white-chevron-right.svg" alt="" class="mobile">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="mobile">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16.0733 10.5144L10.4142 4.85535L9 6.26956L14.659 11.9286L9.00187 17.5858L10.4161 19L17.488 11.9281L16.0738 10.5139L16.0733 10.5144Z"
+                                            fill="white" />
+                                    </svg>
                                 </button>
                             </li>
                             <li class="services__tags-item">
-                                <button class="services__tags-item__btn tab-btn">
+                                <button class="services__tags-item__btn tab-btn" data-path="identity">
                                     <span>Айдентика</span>
-                                    <img src="./src/images/svg/white-chevron-right.svg" alt="" class="mobile">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="mobile">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16.0733 10.5144L10.4142 4.85535L9 6.26956L14.659 11.9286L9.00187 17.5858L10.4161 19L17.488 11.9281L16.0738 10.5139L16.0733 10.5144Z"
+                                            fill="white" />
+                                    </svg>
                                 </button>
                             </li>
                             <li class="services__tags-item">
-                                <button class="services__tags-item__btn tab-btn">
+                                <button class="services__tags-item__btn tab-btn" data-path="smm">
                                     <span>SMM</span>
-                                    <img src="./src/images/svg/white-chevron-right.svg" alt="" class="mobile">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="mobile">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16.0733 10.5144L10.4142 4.85535L9 6.26956L14.659 11.9286L9.00187 17.5858L10.4161 19L17.488 11.9281L16.0738 10.5139L16.0733 10.5144Z"
+                                            fill="white" />
+                                    </svg>
                                 </button>
                             </li>
                             <li class="services__tags-item">
-                                <button class="services__tags-item__btn tab-btn">
+                                <button class="services__tags-item__btn tab-btn" data-path="crm">
                                     <span>CRM маркетинг</span>
-                                    <img src="./src/images/svg/white-chevron-right.svg" alt="" class="mobile">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="mobile">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16.0733 10.5144L10.4142 4.85535L9 6.26956L14.659 11.9286L9.00187 17.5858L10.4161 19L17.488 11.9281L16.0738 10.5139L16.0733 10.5144Z"
+                                            fill="white" />
+                                    </svg>
                                 </button>
                             </li>
                             <li class="services__tags-item">
-                                <button class="services__tags-item__btn tab-btn">
+                                <button class="services__tags-item__btn tab-btn" data-path="SERM">
                                     <span>Управление репутацией (SERM) </span>
-                                    <img src="./src/images/svg/white-chevron-right.svg" alt="" class="mobile">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="mobile">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16.0733 10.5144L10.4142 4.85535L9 6.26956L14.659 11.9286L9.00187 17.5858L10.4161 19L17.488 11.9281L16.0738 10.5139L16.0733 10.5144Z"
+                                            fill="white" />
+                                    </svg>
                                 </button>
                             </li>
                             <li class="services__tags-item">
-                                <button class="services__tags-item__btn tab-btn">
+                                <button class="services__tags-item__btn tab-btn" data-path="marketplaces">
                                     <span>Продвижение на маркетплейсах</span>
-                                    <img src="./src/images/svg/white-chevron-right.svg" alt="" class="mobile">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="mobile">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16.0733 10.5144L10.4142 4.85535L9 6.26956L14.659 11.9286L9.00187 17.5858L10.4161 19L17.488 11.9281L16.0738 10.5139L16.0733 10.5144Z"
+                                            fill="white" />
+                                    </svg>
                                 </button>
                             </li>
                             <li class="services__tags-item">
-                                <button class="services__tags-item__btn tab-btn">
+                                <button class="services__tags-item__btn tab-btn" data-path="mobile">
                                     <span>Mobile</span>
-                                    <img src="./src/images/svg/white-chevron-right.svg" alt="" class="mobile">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="mobile">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16.0733 10.5144L10.4142 4.85535L9 6.26956L14.659 11.9286L9.00187 17.5858L10.4161 19L17.488 11.9281L16.0738 10.5139L16.0733 10.5144Z"
+                                            fill="white" />
+                                    </svg>
                                 </button>
                             </li>
                         </ul>
@@ -387,6 +446,7 @@
 
         <section class="team">
             <div class="container">
+                <div id="teamline" class="teamline"></div>
                 <div class="team__top">
                     <div class="team__top-left">
                         <p class="team__top-left__heading heading2">Наша команда</p>
@@ -510,7 +570,113 @@
         <img src="./src/images/svg/footer-logo.svg" alt="" class="footer__right-logo desktop">
     </div>
 </footer>
+<script defer src="./src/js/bodymovin.js"></script>
+<!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
+<!-- <script src="https://cdnjs.com/libraries/bodymovin" type="text/javascript"></script> -->
 <script defer src="./src/js/main.js"></script>
+    <div class="services__item mobile" data-target="site-creation">
+        <button class="services__item-close">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g style="mix-blend-mode:difference">
+                    <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="white" />
+                    <rect x="13.2832" y="12.0742" width="20" height="1" transform="rotate(45 13.2832 12.0742)"
+                        fill="white" />
+                    <rect x="12.5762" y="26.2168" width="20" height="1" transform="rotate(-45 12.5762 26.2168)"
+                        fill="white" />
+                </g>
+            </svg>
+        </button>
+        <p class="services__item-heading mobile">Создание сайта</p>
+        <p class="services__description">Создание сайта</p>
+        <p class="services__item-price mobile">От 35 000₽ </p>
+        <img src="./src/images/svg/services-icon.svg" alt="" class="services__icon">
+        <div class="services__buttons">
+            <button class="defalut-btn request-btn">Оставить заявку</button>
+            <button class="stroke-btn about-service">
+                <span class="desktop">От 35 000₽</span>
+                <span>Подробнее об услуге </span>
+                <img src="./src/images/svg/chevron-right.svg" alt="">
+            </button>
+        </div>
+    </div>
+    <div class="services__item mobile" data-target="seo">
+        <button class="services__item-close">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g style="mix-blend-mode:difference">
+                    <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="white" />
+                    <rect x="13.2832" y="12.0742" width="20" height="1" transform="rotate(45 13.2832 12.0742)"
+                        fill="white" />
+                    <rect x="12.5762" y="26.2168" width="20" height="1" transform="rotate(-45 12.5762 26.2168)"
+                        fill="white" />
+                </g>
+            </svg>
+        </button>
+        <p class="services__item-heading mobile">SEO продвижение</p>
+        <p class="services__description">Аудит контекстной рекламы. Контекстная реклама. <br>
+            Яндекс Директ и Google Ads «под ключ»</p>
+        <p class="services__item-price mobile">От 35 000₽ </p>
+        <img src="./src/images/svg/services-icon.svg" alt="" class="services__icon">
+        <div class="services__buttons">
+            <button class="defalut-btn request-btn">Оставить заявку</button>
+            <button class="stroke-btn about-service">
+                <span class="desktop">От 35 000₽</span>
+                <span>Подробнее об услуге </span>
+                <img src="./src/images/svg/chevron-right.svg" alt="">
+            </button>
+        </div>
+    </div>
+    <div class="request-popup">
+        <button class="request-popup__close">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g style="mix-blend-mode:difference">
+                    <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="white" />
+                    <rect x="13.2832" y="12.0742" width="20" height="1" transform="rotate(45 13.2832 12.0742)"
+                        fill="white" />
+                    <rect x="12.5762" y="26.2168" width="20" height="1" transform="rotate(-45 12.5762 26.2168)"
+                        fill="white" />
+                </g>
+            </svg>
+        </button>
+        <div class="container">
+            <div class="request-popup__body">
+                <p class="request-popup__heading">Давайте обсудим ваш проект!</p>
+                <form action="#" class="callback-form">
+                    <div class="callback-form__input-container communication-method">
+                        <p class="communication-method__text">Связаться со мной по</p>
+                        <div class="communication-method__choice">
+                            <div class="communication-method__choice-head">
+                                <p>Телефону</p>
+                                <img src="./src/images/svg/triangle.svg" alt="">
+                            </div>
+                            <div class="communication-method__choice-dropdown">
+                                <ul class="communication-method__choice-dropdown__list">
+                                    <li class="communication-method__choice-dropdown__list-item">
+                                        <button>E-mail</button>
+                                    </li>
+                                    <li class="communication-method__choice-dropdown__list-item">
+                                        <button>Телефон</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="callback-form__input-container">
+                        <input type="text" placeholder="Как вас зовут?" class="callback-form__input">
+                    </div>
+
+                    <div class="callback-form__input-container">
+                        <input type="number" placeholder="+7 (    )    -    - " class="callback-form__input">
+                    </div>
+
+                    <button class="callback-form__btn defalut-btn">Отправить</button>
+                    <p class="callback-form__policy">Нажимая на кнопку «Отправить» вы соглашаетесь с политикой
+                        конфиденциальности</p>
+                </form>
+            </div>
+        </div>
+
+    </div>
 </body>
 
 </html>

@@ -85,6 +85,8 @@
     }
 
     @media (max-width: 62em) {
+        padding-top: 0;
+        padding-bottom: 0;
         flex-direction: column-reverse;
         height: auto;
 

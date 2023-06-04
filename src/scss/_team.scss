@@ -2,6 +2,18 @@
     padding-top: 12rem;
     padding-bottom: 12rem;
 
+    .container {
+        position: relative;
+    }
+
+    #teamline {
+        width: 49.6rem;
+        height: 12rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
     &__top {
         margin-bottom: 2.4rem;
         display: flex;

@@ -42,4 +42,46 @@
             }
         }
     }
+
+    @media (max-width: 62em) {
+        padding-top: 26.5rem;
+        padding-bottom: 29.5rem;
+        height: auto;
+        display: block;
+
+        &__content {
+            margin: 0 auto;
+            width: 47.4rem;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__left {
+            margin-bottom: 3.2rem;
+            width: 100%;
+        }
+
+        &__right {
+            padding: 0;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 47.99em) {
+        padding-top: 35.4rem;
+        padding-bottom: 37.8rem;
+    }
+
+    &__content {
+        width: 100%;
+    }
+
+    &__left {
+        margin-bottom: 6.4rem;
+
+        &-heading {
+            font-size: 4.8rem;
+            line-height: 5.8rem;
+        }
+    }
 }

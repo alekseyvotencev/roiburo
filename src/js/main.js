@@ -84,6 +84,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // аккордеон в хедер меню
     initAccordion(header);
 
+    // аккордеон в секции Этапы работы
+
+    if (document.querySelector('.stages__right-list') && window.innerWidth < 768) {
+        initAccordion(document.querySelector('.stages__right-list'));
+    }
+
     // табы
     function initTabs(tabButtons, tabBlocks) {
         tabButtons.forEach(btn => {
@@ -95,11 +101,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 tabBlocks.forEach(block => {
                     if (block.dataset.target === path) {
                         block.classList.add('active');
-                        if (window.innerWidth <= 768 && block.classList.contains('account-lk__right-content')) {
-                            body.classList.add('lock');
-                        }
                     }
                 })
+
+                if (window.innerWidth < 993 && tabBlocks[0].classList.contains('services__item') && tabBlocks[0].classList.contains('mobile')) {
+                    body.classList.add('lock');
+                    body.classList.add('dark');
+                }
             })
         })
     }
@@ -145,4 +153,61 @@ document.addEventListener('DOMContentLoaded', function () {
             })
         })
     }
+
+    // табы в блоке услуг на главной
+    if (document.querySelector('.services__tags')) {
+        let servicesTags = document.querySelectorAll('.services__tags-item__btn');
+        let servicesBlocksDesktop = document.querySelectorAll('.services__item.desktop');
+        let servicesBlocksMobile = document.querySelectorAll('.services__item.mobile');
+
+        if (window.innerWidth > 992) {
+            document.querySelector('.services__tags-item__btn[data-path=seo]').classList.add('active');
+            document.querySelector('.services__item.desktop[data-target=seo]').classList.add('active');
+            initTabs(servicesTags, servicesBlocksDesktop)
+        } else {
+            initTabs(servicesTags, servicesBlocksMobile)
+
+            let servicesBlocksClose = document.querySelectorAll('.services__item-close');
+            servicesBlocksClose.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    btn.parentElement.classList.remove('active');
+                    body.classList.remove('lock');
+                    body.classList.remove('dark');
+                    servicesTags.forEach(el => el.classList.remove('active'));
+                })
+            })
+        }
+
+
+    }
+
+    if (document.querySelector('.request-btn') && document.querySelector('.request-popup')) {
+        let requestBtns = document.querySelectorAll('.request-btn');
+        let requestPopup = document.querySelector('.request-popup');
+        requestBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                openPopupElement(requestPopup);
+            })
+        })
+
+        let requestPopupClose = requestPopup.querySelector('.request-popup__close');
+        requestPopupClose.addEventListener('click', function () {
+            if (!document.querySelector('.services__item.mobile.active')) {
+                closePopupElement(requestPopup);
+            }
+            requestPopupClose.parentElement.classList.remove('active');
+        })
+    }
+
+    // анимации
+    if (document.querySelector('.teamline')) {
+        const teamlineAnimation = bodymovin.loadAnimation({
+            container: document.getElementById('teamline'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: '/src/js/teamline.json'
+        })
+    }
+
 })

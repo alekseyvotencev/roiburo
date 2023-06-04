@@ -15,6 +15,14 @@
         width: 80.8rem;
     }
 
+    &__item {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
     &__right {
         width: 39.2rem;
     }
@@ -113,9 +121,25 @@
             min-height: 100vh;
             overflow-y: scroll;
             background-color: $white;
+            transition-property: transform;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+            z-index: 2;
 
             &.active {
                 transform: translateX(0);
+                display: flex;
+            }
+
+            &-close {
+                position: absolute;
+                top: 1.6rem;
+                right: 2.6rem;
+
+                svg {
+                    width: 4rem;
+                    height: 4rem;
+                }
             }
 
             &-heading {
@@ -170,6 +194,43 @@
             margin-bottom: 8rem;
         }
 
+        &__item {
+            padding: 19.2rem 3rem 4.8rem 3rem;
+            width: 100%;
+
+            &-close {
+                top: 3rem;
+                right: 3rem;
+
+                svg {
+                    width: 8rem;
+                    height: 8rem;
+                }
+            }
+
+            &-heading {
+                margin-bottom: 3.2rem;
+                font-size: 4.8rem;
+                line-height: 5.8rem;
+            }
+
+            &-price {
+                font-size: 3.2rem;
+                line-height: 4.8rem;
+            }
+        }
+
+        &__description {
+            margin-bottom: 3.2rem;
+            font-size: 4rem;
+            line-height: 5.6rem;
+        }
+
+        &__icon {
+            width: 40rem;
+            height: 40rem;
+        }
+
         &__tags {
             &-item {
                 &:not(:last-child) {
@@ -178,6 +239,17 @@
 
                 &__btn {
                     max-width: 100%;
+                }
+            }
+        }
+
+        &__buttons {
+            .about-service {
+                padding: 3.2rem;
+
+                img {
+                    width: 4.8rem;
+                    height: 4.8rem;
                 }
             }
         }
