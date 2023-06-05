@@ -23,14 +23,235 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
     }
 
     &__left {
-        width: 80.8rem;
+        width: 85rem;
+
+        &-onboarding {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 85rem;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-100%);
+            animation: scrollUp 5s ease;
+
+            & > ul {
+                li {
+                    opacity: 0;
+
+                    &:not(:last-child) {
+                        margin-bottom: 5.6rem;
+                    }
+
+                    &:nth-child(1) {
+                        opacity: 1;
+                        animation: opacityChange1 5s ease;
+                        animation-delay: 1s;
+                    }
+
+                    &:nth-child(2) {
+                        opacity: 0.1;
+                        animation: opacityChange2 5s ease;
+                        animation-delay: 1s;
+                    }
+
+                    &:nth-child(3) {
+                        animation: opacityChange3 5s ease;
+                        animation-delay: 1s;
+                    }
+
+                    &:nth-child(4) {
+                        animation: opacityChange4 5s ease;
+                        animation-delay: 1s;
+                    }
+
+                    &:nth-child(5) {
+                        animation: opacityChange5 5s ease;
+                        animation-delay: 1s;
+                    }
+
+                    @keyframes opacityChange1 {
+                        0% {
+                            opacity: 1;
+                        }
+                        20% {
+                            opacity: 0;
+                        }
+                        40% {
+                            opacity: 0;
+                        }
+                        60% {
+                            opacity: 0;
+                        }
+                        80% {
+                            opacity: 0;
+                        }
+                        100% {
+                            opacity: 0;
+                        }
+                    }
+
+                    @keyframes opacityChange2 {
+                        0% {
+                            opacity: 0.1;
+                        }
+                        20% {
+                            opacity: 1;
+                        }
+                        40% {
+                            opacity: 0;
+                        }
+                        60% {
+                            opacity: 0;
+                        }
+                        80% {
+                            opacity: 0;
+                        }
+                        100% {
+                            opacity: 0;
+                        }
+                    }
+
+                    @keyframes opacityChange3 {
+                        0% {
+                            opacity: 0;
+                        }
+                        20% {
+                            opacity: 0.1;
+                        }
+                        40% {
+                            opacity: 1;
+                        }
+                        60% {
+                            opacity: 0;
+                        }
+                        80% {
+                            opacity: 0;
+                        }
+                        100% {
+                            opacity: 0;
+                        }
+                    }
+
+                    @keyframes opacityChange4 {
+                        0% {
+                            opacity: 0;
+                        }
+                        20% {
+                            opacity: 0;
+                        }
+                        40% {
+                            opacity: 0.1;
+                        }
+                        60% {
+                            opacity: 1;
+                        }
+                        80% {
+                            opacity: 0;
+                        }
+                        100% {
+                            opacity: 0;
+                        }
+                    }
+
+                    @keyframes opacityChange5 {
+                        0% {
+                            opacity: 0;
+                        }
+                        20% {
+                            opacity: 0;
+                        }
+                        40% {
+                            opacity: 0;
+                        }
+                        60% {
+                            opacity: 0.1;
+                        }
+                        80% {
+                            opacity: 1;
+                        }
+                        100% {
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+
+            @keyframes scrollUp {
+                0% {
+                    transform: translateY(0%);
+                    opacity: 1;
+                    visibility: visible;
+                }
+                20% {
+                    transform: translateY(-22%);
+                    opacity: 1;
+                    visibility: visible;
+                }
+                40% {
+                    transform: translateY(-44%);
+                    opacity: 1;
+                    visibility: visible;
+                }
+                60% {
+                    transform: translateY(-66%);
+                    opacity: 1;
+                    visibility: visible;
+                }
+                80% {
+                    transform: translateY(-88%);
+                    opacity: 1;
+                    visibility: visible;
+                }
+                100% {
+                    transform: translateY(-110%);
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
     }
 
     &__heading {
         margin-bottom: 1.2rem;
+        animation: headingAppearing 5s ease;
+
+        @keyframes headingAppearing {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+                visibility: hidden;
+            }
+            20% {
+                transform: translateY(100%);
+                opacity: 0;
+                visibility: hidden;
+            }
+            40% {
+                transform: translateY(100%);
+                opacity: 0;
+                visibility: hidden;
+            }
+            60% {
+                transform: translateY(100%);
+                opacity: 0;
+                visibility: hidden;
+            }
+            80% {
+                transform: translateY(100%);
+                opacity: 0;
+                visibility: hidden;
+            }
+            100% {
+                transform: translateY(0%);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
     }
 
     &__description {
@@ -43,6 +264,28 @@
     &__sertificates {
         margin-top: 4rem;
         display: flex;
+        animation: sertificateAppearing 5s ease;
+
+        @keyframes sertificateAppearing {
+            0% {
+                opacity: 0;
+            }
+            20% {
+                opacity: 0;
+            }
+            40% {
+                opacity: 0;
+            }
+            60% {
+                opacity: 0;
+            }
+            80% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
 
         &-item {
             &:not(:last-child) {
@@ -70,8 +313,30 @@
 
     &__right {
         padding-left: 3.2rem;
-        width: 39rem;
+        width: 30rem;
         border-left: 1px solid #f4f4f4;
+        animation: heroRightAppearing 5s ease;
+
+        @keyframes heroRightAppearing {
+            0% {
+                opacity: 0;
+            }
+            20% {
+                opacity: 0;
+            }
+            40% {
+                opacity: 0;
+            }
+            60% {
+                opacity: 0;
+            }
+            80% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
 
         &-list {
             &__item {

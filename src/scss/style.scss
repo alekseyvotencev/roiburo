@@ -44,6 +44,10 @@ body.lock {
     overflow: hidden;
 }
 
+.paused {
+    animation-play-state: paused;
+}
+
 @media (min-width: 62.01em) {
     .mobile {
         display: none !important;

@@ -4,6 +4,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const body = document.body;
     const html = document.documentElement;
 
+    let heroHeading = document.querySelector('.hero__heading');
+    let heroSertificates = document.querySelector('.hero__sertificates');
+    let onboardingText = document.querySelector('.hero__left-onboarding');
+    let heroRight = document.querySelector('.hero__right');
+    if (onboardingText && heroHeading) {
+        setTimeout(() => {
+            onboardingText.classList.remove('paused');
+            heroHeading.classList.remove('paused');
+            header.classList.remove('paused');
+            heroSertificates.classList.remove('paused');
+            heroRight.classList.remove('paused');
+        }, 1000);
+    }
+
+
     // Пересчет rem в px 
     const rem = function (rem) {
         if (window.innerWidth > 768) {
@@ -61,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
         headerContactsDropdown = header.querySelector('.header__contacts-dropdown');
         headerContactsBtn.addEventListener('click', function () {
             headerContactsDropdown.classList.toggle('active');
-            clickOutside(headerContacts, headerContactsDropdown)
+            clickOutside(headerContacts, headerContactsDropdown);
         })
     }
 
@@ -216,14 +231,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // анимации
-    if (document.querySelector('.teamline')) {
-        const teamlineAnimation = bodymovin.loadAnimation({
-            container: document.getElementById('teamline'),
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: '/src/js/teamline.json'
-        })
-    }
+    // if (document.querySelector('.teamline')) {
+    //     const teamlineAnimation = bodymovin.loadAnimation({
+    //         container: document.getElementById('teamline'),
+    //         renderer: 'svg',
+    //         loop: true,
+    //         autoplay: true,
+    //         path: '/src/js/teamline.json'
+    //     })
+    // }
 
 })
