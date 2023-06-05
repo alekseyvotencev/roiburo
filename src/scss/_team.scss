@@ -9,9 +9,11 @@
     #teamline {
         width: 49.6rem;
         height: 12rem;
+        object-fit: contain;
         position: absolute;
-        top: 0;
+        top: -3.2rem;
         left: 0;
+        z-index: 0;
     }
 
     &__top {
@@ -21,9 +23,12 @@
         &-left {
             margin-right: 2.4rem;
             width: 28.8rem;
+            position: relative;
 
             &__heading {
+                position: relative;
                 margin-bottom: 4rem;
+                z-index: 1;
             }
 
             &__list {
@@ -88,6 +93,13 @@
         padding-top: 6rem;
         padding-bottom: 6rem;
 
+        #teamline {
+            width: 47.2rem;
+            height: 11.4rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
         &__top {
             flex-wrap: wrap;
             justify-content: space-between;
@@ -145,6 +157,14 @@
     @media (max-width: 47.99em) {
         padding-top: 12rem;
         padding-bottom: 12rem;
+
+        #teamline {
+            width: 75rem;
+            height: 18rem;
+            top: -5.2rem;
+            left: -3rem;
+            transform: none;
+        }
 
         &__top {
             &-left {

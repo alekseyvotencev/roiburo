@@ -1,20 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    const header = document.querySelector('header');
+    const header = document.querySelector('.header');
     const body = document.body;
     const html = document.documentElement;
+    const footer = document.querySelector('.footer')
 
     let heroHeading = document.querySelector('.hero__heading');
     let heroSertificates = document.querySelector('.hero__sertificates');
     let onboardingText = document.querySelector('.hero__left-onboarding');
     let heroRight = document.querySelector('.hero__right');
-    if (onboardingText && heroHeading) {
+    let heroBtn = document.querySelector('.hero .request-btn');
+
+    if (!document.querySelector('.main-hero')) {
+        header.classList.remove('main-header');
+    }
+
+    if (onboardingText) {
         setTimeout(() => {
             onboardingText.classList.remove('paused');
             heroHeading.classList.remove('paused');
             header.classList.remove('paused');
             heroSertificates.classList.remove('paused');
             heroRight.classList.remove('paused');
+            heroBtn.classList.remove('paused');
         }, 1000);
     }
 
@@ -70,15 +78,15 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
-    if (document.querySelector('.header__contacts')) {
-        let headerContacts = document.querySelector('.header__contacts');
-        let headerContactsBtn = header.querySelector('.header__phone');
-        headerContactsDropdown = header.querySelector('.header__contacts-dropdown');
-        headerContactsBtn.addEventListener('click', function () {
-            headerContactsDropdown.classList.toggle('active');
-            clickOutside(headerContacts, headerContactsDropdown);
-        })
-    }
+    // кнопка контактов в хедере
+    let headerContacts = document.querySelector('.header__contacts');
+    let headerContactsBtn = header.querySelector('.header__phone');
+    headerContactsDropdown = header.querySelector('.header__contacts-dropdown');
+    headerContactsBtn.addEventListener('click', function () {
+        headerContactsDropdown.classList.toggle('active');
+        clickOutside(headerContacts, headerContactsDropdown);
+    })
+
 
     // аккордеоны
 
@@ -230,15 +238,112 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
+    // анимация для футера
+    if (window.innerWidth < 993) {
+        footer.classList.add('active');
+    } else {
+        let footerOffset = footer.offsetTop;
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > footerOffset - 300) {
+                footer.classList.add('active');
+            }
+        })
+    }
+
+
     // анимации
-    // if (document.querySelector('.teamline')) {
-    //     const teamlineAnimation = bodymovin.loadAnimation({
-    //         container: document.getElementById('teamline'),
-    //         renderer: 'svg',
-    //         loop: true,
-    //         autoplay: true,
-    //         path: '/src/js/teamline.json'
-    //     })
-    // }
+
+    // блок hero
+    if (document.querySelector('.hero')) {
+        const homeAnimation = bodymovin.loadAnimation({
+            container: document.getElementById('home'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+            path: '/src/js/home.json',
+        })
+
+        const digitalAnimation = bodymovin.loadAnimation({
+            container: document.getElementById('digital'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+            path: '/src/js/digital.json',
+        })
+
+        setTimeout(() => {
+            homeAnimation.play();
+        }, 6000);
+
+        setTimeout(() => {
+            digitalAnimation.play();
+        }, 7000);
+
+    }
+
+    // блок услуг
+    if (document.querySelector('.services')) {
+        const servAnimation = bodymovin.loadAnimation({
+            container: document.getElementById('serv'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+            path: '/src/js/serv.json',
+        })
+
+        const serv2Animation = bodymovin.loadAnimation({
+            container: document.getElementById('serv2'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+            path: '/src/js/serv2.json',
+        })
+
+        let servSection = document.querySelector('.services');
+        let servSectionOffset = servSection.offsetTop;
+        if (window.scrollY > servSectionOffset - 300) {
+            servAnimation.play();
+            serv2Animation.play();
+        }
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > servSectionOffset - 300) {
+                servAnimation.play();
+                serv2Animation.play();
+            }
+        })
+    }
+
+    // блок Команда
+    if (document.querySelector('.teamline')) {
+        const teamlineAnimation = bodymovin.loadAnimation({
+            container: document.getElementById('teamline'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+            path: '/src/js/teamline.json',
+        })
+
+        let teamSection = document.querySelector('.team');
+        let teamSectionOffset = teamSection.offsetTop;
+        if (window.scrollY > teamSectionOffset - 300) {
+            teamlineAnimation.play();
+        }
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > teamSectionOffset - 300) {
+                teamlineAnimation.play();
+            }
+        })
+    }
+
+    // блок seo
+    if (document.querySelector('.hero.seo')) {
+        const seoAnimation = bodymovin.loadAnimation({
+            container: document.getElementById('seo'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            path: '/src/js/seo.json',
+        })
+    }
 
 })

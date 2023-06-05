@@ -45,7 +45,7 @@ body.lock {
 }
 
 .paused {
-    animation-play-state: paused;
+    animation-play-state: paused !important;
 }
 
 @media (min-width: 62.01em) {

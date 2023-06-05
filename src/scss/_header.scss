@@ -3,7 +3,10 @@
     top: 1.6rem;
     left: 0;
     width: 100%;
-    animation: headerAppearing 5s ease;
+
+    &.main-header {
+        animation: headerAppearing 5s ease;
+    }
 
     @keyframes headerAppearing {
         0% {

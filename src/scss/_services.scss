@@ -4,6 +4,26 @@
     align-items: center;
     height: 100vh;
     position: relative;
+    z-index: 0;
+    overflow: hidden;
+
+    #serv {
+        position: absolute;
+        top: 0;
+        left: 34.8rem;
+        width: 80.8rem;
+        height: 100%;
+        z-index: -1;
+    }
+
+    #serv2 {
+        position: absolute;
+        top: 0;
+        right: 34.8rem;
+        width: 39.2rem;
+        height: 100%;
+        z-index: -1;
+    }
 
     &__container {
         display: flex;
@@ -103,6 +123,12 @@
         display: block;
         height: auto;
 
+        #serv {
+            left: -9.4rem;
+            width: 95.6rem;
+            height: 100%;
+        }
+
         &__container {
             flex-direction: column;
             align-items: flex-start;
@@ -201,6 +227,12 @@
     @media (max-width: 47.99em) {
         padding-top: 16rem;
         padding-bottom: 16rem;
+
+        #serv {
+            left: -35.2rem;
+            width: 145.6em;
+            height: 100%;
+        }
 
         &__heading {
             margin-bottom: 8rem;

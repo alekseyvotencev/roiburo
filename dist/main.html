@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header class="header paused">
+    <header class="header paused main-header">
     <div class="header__menu">
         <div class="container">
             <nav class="header__menu-nav">
@@ -126,8 +126,9 @@
 
 </header>
     <main>
-        <section class="hero">
+        <section class="hero main-hero">
             <div class="container">
+                <div id="home" class="home"></div>
                 <div class="hero__content">
                     <div class="hero__left">
                         <div class="hero__left-onboarding paused">
@@ -149,7 +150,10 @@
                                 </li>
                             </ul>
                         </div>
-                        <p class="hero__heading heading1 paused">Разрабатывем эффективные Digital решения для роста бизнеса
+                        <div id="digital" class="digital"></div>
+                        <p class="hero__heading heading1 paused">Разрабатывем эффективные <br>Digital
+                            решения для роста
+                            бизнеса
                         </p>
                         <ul class="hero__sertificates paused">
                             <li class="hero__sertificates-item">
@@ -182,10 +186,12 @@
                     </div>
                 </div>
             </div>
-            <button class="request-btn stroke-btn white-stroke">Оставить заявку</button>
+            <button class="request-btn stroke-btn white-stroke paused">Оставить заявку</button>
         </section>
 
         <section class="services white-section">
+            <div id="serv"></div>
+            <div id="serv2" class="desktop"></div>
             <div class="container">
                 <div class="services__container">
                     <div class="services__left">
@@ -201,7 +207,12 @@
                                     <button class="stroke-btn about-service">
                                         <span class="desktop">От 35 000₽</span>
                                         <span>Подробнее об услуге </span>
-                                        <img src="./src/images/svg/chevron-right.svg" alt="">
+                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M16.5733 10.5144L10.9142 4.85535L9.5 6.26956L15.159 11.9286L9.50187 17.5858L10.9161 19L17.988 11.9281L16.5738 10.5139L16.5733 10.5144Z"
+                                                fill="#FE014D" />
+                                        </svg>
                                     </button>
                                 </div>
                             </div>
@@ -512,9 +523,9 @@
 
         <section class="team">
             <div class="container">
-                <div id="teamline" class="teamline"></div>
                 <div class="team__top">
                     <div class="team__top-left">
+                        <div id="teamline" class="teamline"></div>
                         <p class="team__top-left__heading heading2">Наша команда</p>
                         <ul class="team__top-left__list">
                             <li class="team__top-left__list-item">
@@ -637,6 +648,7 @@
     </div>
 </footer>
 <script defer src="./src/js/bodymovin.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.0/lottie.min.js"></script>
 <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
 <!-- <script src="https://cdnjs.com/libraries/bodymovin" type="text/javascript"></script> -->
 <script defer src="./src/js/main.js"></script>
