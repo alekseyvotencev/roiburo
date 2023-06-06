@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
         accItems.forEach(item => {
             let accHead = item.querySelector('.acc-head');
             let accContent = item.querySelector('.acc-content');
-            accHead.addEventListener('click', function () {
+            item.addEventListener('click', function () {
 
                 accItems.forEach(el => {
                     if (item !== el) {
