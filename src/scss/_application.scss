@@ -3,6 +3,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+
+    #form {
+        position: absolute;
+        top: 0;
+        left: 34.8rem;
+        width: 70.4rem;
+        height: 100%;
+        z-index: -1;
+    }
 
     &__content {
         display: flex;
@@ -12,6 +24,31 @@
 
     &__left {
         width: 70.7rem;
+
+        &-list {
+            padding: 0;
+            margin: 0;
+            margin-top: 3.2rem;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            list-style-type: none;
+            counter-reset: num;
+
+            &__item {
+                padding: 1.2rem 0 1.2rem 2.4rem;
+                position: relative;
+
+                &::before {
+                    content: counter(num) ".";
+                    counter-increment: num;
+                    display: inline-block;
+                    position: absolute;
+                    top: 1.2rem;
+                    left: 0;
+                    color: $red;
+                }
+            }
+        }
     }
 
     &__right {
@@ -49,6 +86,12 @@
         height: auto;
         display: block;
 
+        #form {
+            top: 0;
+            left: -1.6rem;
+            width: 80rem;
+        }
+
         &__content {
             margin: 0 auto;
             width: 47.4rem;
@@ -59,6 +102,10 @@
         &__left {
             margin-bottom: 3.2rem;
             width: 100%;
+            
+            &-list {
+                margin-top: 2.1rem;
+            }
         }
 
         &__right {
@@ -70,18 +117,38 @@
     @media (max-width: 47.99em) {
         padding-top: 35.4rem;
         padding-bottom: 37.8rem;
-    }
 
-    &__content {
-        width: 100%;
-    }
+        &__content {
+            width: 100%;
+        }
 
-    &__left {
-        margin-bottom: 6.4rem;
+        &__left {
+            margin-bottom: 6.4rem;
 
-        &-heading {
-            font-size: 4.8rem;
-            line-height: 5.8rem;
+            &-heading {
+                font-size: 4.8rem;
+                line-height: 5.8rem;
+            }
+
+            &-list {
+                margin-top: 4.2rem;
+                font-size: 3.2rem;
+                line-height: 4.4rem;
+
+                &__item {
+                    padding: 2.4rem 0 2.4rem 4.8rem;
+
+                    &::before {
+                        top: 2.4rem;
+                    }
+                }
+            }
+        }
+
+        #form {
+            top: 0;
+            left: -25.8rem;
+            width: 126.8rem;
         }
     }
 }

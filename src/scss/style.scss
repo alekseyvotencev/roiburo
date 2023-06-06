@@ -15,6 +15,8 @@
 @import "application";
 @import "qa";
 
+@import "404";
+
 body {
     position: relative;
     &::after {

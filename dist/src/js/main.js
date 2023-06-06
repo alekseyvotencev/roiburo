@@ -239,17 +239,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // анимация для футера
-    if (window.innerWidth < 993) {
-        footer.classList.add('active');
-    } else {
-        let footerOffset = footer.offsetTop;
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > footerOffset - 300) {
-                footer.classList.add('active');
-            }
-        })
+    if (footer) {
+        if (window.innerWidth < 993) {
+            footer.classList.add('active');
+        } else {
+            let footerOffset = footer.offsetTop;
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > footerOffset - 300) {
+                    footer.classList.add('active');
+                }
+            })
+        }
     }
-
 
     // анимации
 
@@ -345,5 +346,39 @@ document.addEventListener('DOMContentLoaded', function () {
             path: '/src/js/seo.json',
         })
     }
+
+    // блок Команда
+    if (document.querySelector('.application')) {
+        const formAnimation = bodymovin.loadAnimation({
+            container: document.getElementById('form'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: false,
+            path: '/src/js/form.json',
+        })
+
+        let applicationSection = document.querySelector('.application');
+        let applicationSectionOffset = applicationSection.offsetTop;
+        if (window.scrollY > applicationSectionOffset - 300) {
+            formAnimation.play();
+        }
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > applicationSectionOffset - 300) {
+                formAnimation.play();
+            }
+        })
+    }
+
+    // блок seo
+    if (document.querySelector('.error')) {
+        const error404Animation = bodymovin.loadAnimation({
+            container: document.getElementById('e404'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: '/src/js/404.json',
+        })
+    }
+
 
 })
