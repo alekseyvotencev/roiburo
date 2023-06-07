@@ -87,6 +87,14 @@ document.addEventListener('DOMContentLoaded', function () {
         clickOutside(headerContacts, headerContactsDropdown);
     })
 
+    // копировать телефон
+    if (header.querySelector('.copy-phone')) {
+        let copyPhoneBtn = header.querySelector('.copy-phone');
+        copyPhoneBtn.addEventListener('click', function () {
+            navigator.clipboard.writeText(copyPhoneBtn.value);
+        })
+    }
+
 
     // аккордеоны
 
@@ -380,5 +388,42 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
+    // блок тарифы
+    if (document.querySelector('.tariffs')) {
+        let tariffsItems = document.querySelectorAll('.tariffs__item');
+        tariffsItems.forEach(item => {
+            const cardAnimation = bodymovin.loadAnimation({
+                container: item.querySelector('.card'),
+                renderer: 'svg',
+                loop: false,
+                autoplay: false,
+                path: '/src/js/card.json',
+            })
+
+            if (window.innerWidth > 992) {
+                item.addEventListener('mouseover', function () {
+                    cardAnimation.setDirection(1);
+                    cardAnimation.play();
+                })
+                item.addEventListener('mouseout', function () {
+                    cardAnimation.setDirection(-1);
+                    cardAnimation.play();
+                })
+            } else {
+                if (window.scrollY > item.offsetTop - 200) {
+                    cardAnimation.setDirection(1);
+                    cardAnimation.play();
+                }
+                window.addEventListener('scroll', function () {
+                    if (window.scrollY > item.offsetTop - 200) {
+                        cardAnimation.setDirection(1);
+                        cardAnimation.play();
+                    }
+                })
+            }
+        })
+
+
+    }
 
 })

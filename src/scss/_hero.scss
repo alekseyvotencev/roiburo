@@ -6,6 +6,10 @@
     position: relative;
     overflow: hidden;
 
+    & * {
+        background-color: transparent;
+    }
+
     #home {
         position: absolute;
         right: 35rem;

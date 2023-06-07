@@ -156,13 +156,13 @@
             right: 0;
             width: 51.7rem;
             transform: translateX(100%);
-            min-height: 100vh;
+            height: 100vh;
             overflow-y: scroll;
             background-color: $white;
             transition-property: transform;
             transition-duration: 0.3s;
             transition-timing-function: ease-in-out;
-            z-index: 2;
+            z-index: 3;
 
             &.active {
                 transform: translateX(0);

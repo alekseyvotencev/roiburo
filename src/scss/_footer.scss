@@ -86,6 +86,12 @@
 
         &-form {
             width: 49.6rem;
+
+            .callback-form__btn {
+                &::after {
+                    right: 18rem;
+                }
+            }
         }
 
         &-logo {

@@ -76,6 +76,10 @@
                 &::placeholder {
                     color: #dddddd;
                 }
+
+                &:hover:not(:focus-visible) {
+                    border-color: $white;
+                }
             }
         }
     }
@@ -102,7 +106,7 @@
         &__left {
             margin-bottom: 3.2rem;
             width: 100%;
-            
+
             &-list {
                 margin-top: 2.1rem;
             }
