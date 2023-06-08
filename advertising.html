@@ -13,7 +13,7 @@
 <body>
     @@include('./templates/header.html')
     <main>
-        <section class="hero white-section seo">
+        <section class="hero white-section seo section">
             <div id="seo"></div>
             <div class="container">
                 <div class="hero__content">
@@ -57,7 +57,7 @@
             <button class="request-btn stroke-btn black-stroke">Заказать продвижение сайта</button>
         </section>
 
-        <section class="tariffs">
+        <section class="tariffs section">
             <div class="container">
                 <div class="tariffs__list">
                     <div class="tariffs__item">
@@ -198,7 +198,7 @@
             </div>
         </section>
 
-        <section class="stages white-section">
+        <section class="stages white-section section">
             <div class="container">
                 <div class="stages__content">
                     <div class="stages__left">
@@ -289,29 +289,12 @@
 
         </section>
 
-        <section class="application">
+        <section class="application section">
             <div id="form"></div>
             <div class="container">
                 <div class="application__content">
                     <div class="application__left">
                         <p class="application__left-heading heading2">Узнайте стоимость и сроки продвижения проекта</p>
-                        <ol class="application__left-list">
-                            <li class="application__left-list__item">
-                                <p>Расчет объема рынка в интернете и его сезонность</p>
-                            </li>
-                            <li class="application__left-list__item">
-                                <p>Прогноз цены клика, стоимости и количества обращений</p>
-                            </li>
-                            <li class="application__left-list__item">
-                                <p>Прогноз ежемесячного бюджета на рекламу</p>
-                            </li>
-                            <li class="application__left-list__item">
-                                <p>Отчётность</p>
-                            </li>
-                            <li class="application__left-list__item">
-                                <p>Смету со сроками и стоимостью работ</p>
-                            </li>
-                        </ol>
                     </div>
 
                     <div class="application__right">
@@ -341,7 +324,8 @@
                             </div>
 
                             <div class="callback-form__input-container">
-                                <input type="number" placeholder="+7 (    )    -    - " class="callback-form__input">
+                                <input type="text" placeholder="+7 (    )    -    - " data-phone-pattern
+                                    class="callback-form__input">
                             </div>
 
                             <button class="callback-form__btn red-stroke stroke-btn">Отправить</button>
@@ -353,7 +337,7 @@
             </div>
         </section>
 
-        <section class="cases white-section">
+        <section class="cases white-section section">
             <div class="container">
                 <p class="cases__heading heading2">Кейсы</p>
                 <div class="cases__list">
@@ -456,7 +440,7 @@
             </div>
         </section>
 
-        <section class="thanks-letters">
+        <section class="thanks-letters section">
             <div class="container">
                 <p class="thanks-letters__heading heading2">Благодарственные письма</p>
                 <ul class="thanks-letters__list">
@@ -476,7 +460,7 @@
             </div>
         </section>
 
-        <section class="qa">
+        <section class="qa section">
             <div class="container">
                 <p class="qa__heading heading2">Вопрос/ответ</p>
 

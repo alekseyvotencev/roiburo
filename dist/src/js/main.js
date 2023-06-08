@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let headerBurger = header.querySelector('.header__burger');
     let headerMenu = header.querySelector('.header__menu');
     headerBurger.addEventListener('click', function () {
-        headerBurger.classList.toggle('active');
+        header.classList.toggle('active');
         if (window.innerWidth > 992) {
             let scrollWidth = (window.innerWidth - body.clientWidth);
             body.style.paddingRight = `${scrollWidth}px`;
@@ -174,6 +174,41 @@ document.addEventListener('DOMContentLoaded', function () {
         html.classList.toggle('lock');
         headerMenu.classList.toggle('active');
     })
+    if (window.innerWidth > 992) {
+        headerBurger.addEventListener('mouseover', function () {
+            headerBurger.classList.add('hover');
+        })
+        headerBurger.addEventListener('mouseout', function () {
+            headerBurger.classList.remove('hover');
+        })
+    }
+
+    // смена цветов хедера
+    let sections = document.querySelectorAll('.section');
+
+    for (let i = 0; i < sections.length - 1; i++) {
+        console.log(window.scrollY);
+        if (window.scrollY >= sections[i].offsetTop && window.scrollY < sections[i + 1].offsetTop) {
+            if (window.getComputedStyle(sections[i], null).getPropertyValue('background-color') === "rgb(255, 255, 255)") {
+                header.classList.add('black');
+            } else {
+                header.classList.remove('black');
+            }
+        }
+    }
+
+
+    for (let i = 0; i < sections.length - 1; i++) {
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > sections[i].offsetTop && window.scrollY < sections[i + 1].offsetTop) {
+                if (window.getComputedStyle(sections[i], null).getPropertyValue('background-color') === "rgb(255, 255, 255)") {
+                    header.classList.add('black');
+                } else {
+                    header.classList.remove('black');
+                }
+            }
+        })
+    }
 
     // выбор способа связи в форме
     if (document.querySelector('.callback-form')) {
@@ -424,6 +459,34 @@ document.addEventListener('DOMContentLoaded', function () {
         })
 
 
+    }
+
+    // маска для телефона в формах
+    var eventCalllback = function (e) {
+        var el = e.target,
+            clearVal = el.dataset.phoneClear,
+            pattern = el.dataset.phonePattern,
+            matrix_def = "+7 (___) ___-__-__",
+            matrix = pattern ? pattern : matrix_def,
+            i = 0,
+            def = matrix.replace(/\D/g, ""),
+            val = e.target.value.replace(/\D/g, "");
+        if (clearVal !== 'false' && e.type === 'blur') {
+            if (val.length < matrix.match(/([\_\d])/g).length) {
+                e.target.value = '';
+                return;
+            }
+        }
+        if (def.length >= val.length) val = def;
+        e.target.value = matrix.replace(/./g, function (a) {
+            return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+        });
+    }
+    var phone_inputs = document.querySelectorAll('[data-phone-pattern]');
+    for (let elem of phone_inputs) {
+        for (let ev of ['input', 'blur', 'focus']) {
+            elem.addEventListener(ev, eventCalllback);
+        }
     }
 
 })

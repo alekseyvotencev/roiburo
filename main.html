@@ -13,7 +13,7 @@
 <body>
     @@include('./templates/header.html')
     <main>
-        <section class="hero main-hero">
+        <section class="hero main-hero section">
             <div class="container">
                 <div id="home" class="home"></div>
                 <div class="hero__content">
@@ -76,7 +76,7 @@
             <button class="request-btn stroke-btn white-stroke paused">Оставить заявку</button>
         </section>
 
-        <section class="services white-section">
+        <section class="services white-section section">
             <div id="serv"></div>
             <div id="serv2" class="desktop"></div>
             <div class="container">
@@ -236,7 +236,7 @@
             </div>
         </section>
 
-        <section class="cases white-section">
+        <section class="cases white-section section">
             <div class="container">
                 <p class="cases__heading heading2">Кейсы</p>
                 <div class="cases__list">
@@ -387,7 +387,7 @@
             </div>
         </section>
 
-        <section class="thanks-letters">
+        <section class="thanks-letters section">
             <div class="container">
                 <p class="thanks-letters__heading heading2">Благодарственные письма</p>
                 <div class="thanks-letters__list-container">
@@ -409,7 +409,7 @@
             </div>
         </section>
 
-        <section class="team">
+        <section class="team section">
             <div class="container">
                 <div class="team__top">
                     <div class="team__top-left">
@@ -544,7 +544,8 @@
                     </div>
 
                     <div class="callback-form__input-container">
-                        <input type="number" placeholder="+7 (    )    -    - " class="callback-form__input">
+                        <input type="text" placeholder="+7 (    )    -    - " data-phone-pattern
+                            class="callback-form__input">
                     </div>
 
                     <button class="callback-form__btn defalut-btn">Отправить</button>
