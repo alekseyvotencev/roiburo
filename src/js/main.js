@@ -412,7 +412,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const teamlineAnimation = bodymovin.loadAnimation({
             container: document.getElementById('teamline'),
             renderer: 'svg',
-            loop: false,
+            loop: true,
             autoplay: false,
             path: '/src/js/teamline.json',
         })
