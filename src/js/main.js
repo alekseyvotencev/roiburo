@@ -154,6 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (window.innerWidth < 993 && tabBlocks[0].classList.contains('services__item') && tabBlocks[0].classList.contains('mobile')) {
                     body.classList.add('lock');
                     body.classList.add('dark');
+                    header.classList.add('active');
                 }
             })
         })
@@ -163,17 +164,48 @@ document.addEventListener('DOMContentLoaded', function () {
     let headerBurger = header.querySelector('.header__burger');
     let headerMenu = header.querySelector('.header__menu');
     headerBurger.addEventListener('click', function () {
-        header.classList.toggle('active');
-        if (window.innerWidth > 992) {
-            let scrollWidth = (window.innerWidth - body.clientWidth);
-            body.style.paddingRight = `${scrollWidth}px`;
-            header.style.paddingRight = `${scrollWidth}px`
+        if (!header.classList.contains('active')) {
+            header.classList.add('active');
+
+            if (window.innerWidth > 992) {
+                let scrollWidth = (window.innerWidth - body.clientWidth);
+                body.style.paddingRight = `${scrollWidth}px`;
+                header.style.paddingRight = `${scrollWidth}px`
+            }
+
+            body.classList.add('lock');
+            body.classList.add('dark');
+            html.classList.add('lock');
+            headerMenu.classList.add('active');
+        } else {
+            header.classList.remove('active');
+
+            if (window.innerWidth > 992) {
+                body.style.paddingRight = '0';
+                header.style.paddingRight = '0'
+            }
+
+            body.classList.remove('lock');
+            body.classList.remove('dark');
+            html.classList.remove('lock');
+            headerMenu.classList.remove('active');
+
+            if (document.querySelector('.request-popup')) {
+                document.querySelector('.request-popup').classList.remove('active')
+            }
+
+            if (document.querySelector('.services__item.mobile')) {
+                document.querySelectorAll('.services__item.mobile').forEach(element => {
+                    element.classList.remove('active');
+                });
+            }
+
+            if (document.querySelector('.thanks-popup')) {
+                document.querySelector('.thanks-popup').classList.remove('active');
+            }
         }
-        body.classList.toggle('lock');
-        body.classList.toggle('dark');
-        html.classList.toggle('lock');
-        headerMenu.classList.toggle('active');
     })
+
     if (window.innerWidth > 992) {
         headerBurger.addEventListener('mouseover', function () {
             headerBurger.classList.add('hover');
@@ -187,7 +219,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let sections = document.querySelectorAll('.section');
 
     for (let i = 0; i < sections.length - 1; i++) {
-        console.log(window.scrollY);
         if (window.scrollY >= sections[i].offsetTop && window.scrollY < sections[i + 1].offsetTop) {
             if (window.getComputedStyle(sections[i], null).getPropertyValue('background-color') === "rgb(255, 255, 255)") {
                 header.classList.add('black');
@@ -248,16 +279,6 @@ document.addEventListener('DOMContentLoaded', function () {
             initTabs(servicesTags, servicesBlocksDesktop)
         } else {
             initTabs(servicesTags, servicesBlocksMobile)
-
-            let servicesBlocksClose = document.querySelectorAll('.services__item-close');
-            servicesBlocksClose.forEach(btn => {
-                btn.addEventListener('click', function () {
-                    btn.parentElement.classList.remove('active');
-                    body.classList.remove('lock');
-                    body.classList.remove('dark');
-                    servicesTags.forEach(el => el.classList.remove('active'));
-                })
-            })
         }
 
 
@@ -269,15 +290,8 @@ document.addEventListener('DOMContentLoaded', function () {
         requestBtns.forEach(btn => {
             btn.addEventListener('click', function () {
                 openPopupElement(requestPopup);
+                header.classList.add('active');
             })
-        })
-
-        let requestPopupClose = requestPopup.querySelector('.request-popup__close');
-        requestPopupClose.addEventListener('click', function () {
-            if (!document.querySelector('.services__item.mobile.active')) {
-                closePopupElement(requestPopup);
-            }
-            requestPopupClose.parentElement.classList.remove('active');
         })
     }
 
@@ -295,6 +309,42 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // поп-ап done
+    if (document.querySelector('.thanks-popup') && document.querySelector('.callback-form__btn')) {
+        const thanksAnimation = bodymovin.loadAnimation({
+            container: document.getElementById('thanks'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+            path: '/src/js/digital.json',
+        })
+
+        let requestPopup = document.querySelector('.request-popup');
+        let thanksPopup = document.querySelector('.thanks-popup');
+        let thanksOpenBtns = document.querySelectorAll('.callback-form__btn');
+        thanksOpenBtns.forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                setTimeout(() => {
+                    requestPopup.classList.remove('active');
+                }, 400);
+                thanksPopup.classList.add('active');
+                header.classList.add('active', 'black-bg');
+                setTimeout(() => {
+                    thanksAnimation.play();
+                }, 700);
+
+            })
+        })
+
+        thanksCloseBtn = thanksPopup.querySelector('.thanks-popup__btn');
+        thanksCloseBtn.addEventListener('click', function () {
+            header.classList.remove('active')
+            header.classList.remove('black-bg');
+            closePopupElement(thanksPopup);
+        })
+    }
+
     // анимации
 
     // блок hero
@@ -310,7 +360,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const digitalAnimation = bodymovin.loadAnimation({
             container: document.getElementById('digital'),
             renderer: 'svg',
-            loop: false,
+            loop: true,
             autoplay: false,
             path: '/src/js/digital.json',
         })

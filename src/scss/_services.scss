@@ -27,19 +27,37 @@
 
     &__container {
         display: flex;
-        align-items: center;
         justify-content: space-between;
     }
 
     &__left {
         width: 80.8rem;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     &__item {
+        margin-top: auto;
         display: none;
+        animation: showContent 1s forwards;
+        opacity: 0;
+        visibility: hidden;
 
         &.active {
             display: block;
+        }
+    }
+
+    @keyframes showContent {
+        0% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        100% {
+            opacity: 1;
+            visibility: visible;
         }
     }
 
@@ -189,9 +207,10 @@
             }
 
             &-price {
+                margin-bottom: 3.2rem;
                 font-weight: 500;
-                font-size: 1.6rem;
-                line-height: 2.4rem;
+                font-size: 2rem;
+                line-height: 2.8rem;
                 color: $red;
             }
         }
@@ -203,7 +222,8 @@
         }
 
         &__icon {
-            margin: auto auto;
+            margin: 0 auto;
+            margin-bottom: 2.4rem;
             width: 26rem;
             height: 26rem;
         }
@@ -242,16 +262,6 @@
             padding: 19.2rem 3rem 4.8rem 3rem;
             width: 100%;
 
-            &-close {
-                top: 3rem;
-                right: 3rem;
-
-                svg {
-                    width: 8rem;
-                    height: 8rem;
-                }
-            }
-
             &-heading {
                 margin-bottom: 3.2rem;
                 font-size: 4.8rem;
@@ -259,8 +269,9 @@
             }
 
             &-price {
-                font-size: 3.2rem;
-                line-height: 4.8rem;
+                margin-bottom: 6.4rem;
+                font-size: 4rem;
+                line-height: 5.6rem;
             }
         }
 
@@ -271,6 +282,7 @@
         }
 
         &__icon {
+            margin-bottom: 6.4rem;
             width: 40rem;
             height: 40rem;
         }

@@ -3,7 +3,7 @@
     top: 1.6rem;
     left: 0;
     width: 100%;
-    z-index: 3;
+    z-index: 4;
 
     &.main-header {
         animation: headerAppearing 1s ease;
@@ -92,6 +92,46 @@
                 svg {
                     rect {
                         fill: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    &.black-bg.active {
+        .header__logo {
+            svg {
+                path {
+                    fill: $white;
+                }
+            }
+        }
+
+        .header__phone {
+            border-color: $white;
+            color: $white;
+
+            &:hover {
+                background-color: $white;
+                color: $black;
+            }
+        }
+
+        .header__burger {
+            border-color: $white;
+
+            svg {
+                rect {
+                    fill: $white;
+                }
+            }
+
+            &:hover {
+                background-color: $white;
+
+                svg {
+                    rect {
+                        fill: $black;
                     }
                 }
             }
